@@ -1,1 +1,5 @@
-# R8-MBE-Multiplier
+# Design of a R8-MBE multiplier
+## Assignment 1: Digital arithmetic and logic synthesys
+The first activity of this laboratory has been to simulate the design of a Floating Point Unit developed in SystemVerilog by the OpenHW group (https://github.com/openhwgroup/cvfpu). This unit is capable of performing arithmetic operations with floating point operands, compliant with the IEEE 754-2008 standard. To perform the simulation, the provided testbench "tb_fpnew_top_rtl" has been extended in order to test the design performing 10 different floating point multiplications.
+The operands to be multiplied are given in the "data_gen.vhd" file, that are then passed to the FPU design, which outputs the result to the "data_sink fpu.vhd" module that writes them in a file named "results_hdl.txt". To verify the outputted results, a simple C program named "c-model.c" has been written: this program performs the multiplication between the same operands given in the "data_sink fpu.vhd" module, which are here given in integer form: the program casts them as float variables, performs the operation in floating point, and gives the result as unit32_t, a 32 bit format that is then printed in a file named "results_c.txt" in integer form. The matching between the results in the "results_c.txt" file and the "results_hdl.txt" one has
+been verified.
