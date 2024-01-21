@@ -1,0 +1,58 @@
+define_design_lib WORK -path ./WORK
+
+
+analyze -library WORK -format sverilog {../src/mantissa_multiplier/PPG.sv}
+analyze -library WORK -format sverilog {../src/mantissa_multiplier/BoothEncoder.sv}
+analyze -library WORK -format sverilog {../src/mantissa_multiplier/BEU.sv}
+analyze -library WORK -format sverilog {../src/mantissa_multiplier/BoothSelector.sv}
+analyze -library WORK -format sverilog {../src/mantissa_multiplier/BSU.sv}
+analyze -library WORK -format sverilog {../src/mantissa_multiplier/part_prod_top.sv}
+
+analyze -library WORK -format sverilog {../src/mantissa_multiplier/PPRU.sv}
+analyze -library WORK -format sverilog {../src/mantissa_multiplier/ADJUST.sv}
+analyze -library WORK -format sverilog {../src/mantissa_multiplier/DADDA_STAGE1.sv}
+analyze -library WORK -format sverilog {../src/mantissa_multiplier/DADDA_STAGE2.sv}
+analyze -library WORK -format sverilog {../src/mantissa_multiplier/DADDA_STAGE3.sv}
+analyze -library WORK -format sverilog {../src/mantissa_multiplier/FINAL_ADDER.sv}
+analyze -library WORK -format sverilog {../src/mantissa_multiplier/AU.sv}
+analyze -library WORK -format sverilog {../src/mantissa_multiplier/mantissa_multiplier.sv}
+
+analyze -library WORK -format sverilog {../src/FPU/cf_math_pkg.sv}
+analyze -library WORK -format sverilog {../src/FPU/lzc.sv}
+analyze -library WORK -format sverilog {../src/FPU/rr_arb_tree.sv}
+analyze -library WORK -format sverilog {../src/FPU/fpnew_pkg.sv}
+analyze -library WORK -format sverilog {../src/FPU/fpnew_classifier.sv}
+analyze -library WORK -format sverilog {../src/FPU/fpnew_rounding.sv}
+analyze -library WORK -format sverilog {../src/FPU/fpnew_fma.sv}
+analyze -library WORK -format sverilog {../src/FPU/fpnew_opgroup_fmt_slice.sv}
+analyze -library WORK -format sverilog {../src/FPU/fpnew_opgroup_block.sv}
+analyze -library WORK -format sverilog {../src/FPU/fpnew_top.sv}
+
+
+set power_preserve_rtl_hier_names true
+elaborate fpnew_top -lib WORK
+uniquify
+link
+
+
+create_clock -name MY_CLK -period 2.5 clk_i
+set_dont_touch_network MY_CLK
+set_clock_uncertainty 0.07 [get_clocks MY_CLK]
+set_input_delay 0.5 -max -clock MY_CLK [remove_from_collection [all_inputs] clk_i]
+set_output_delay 0.5 -max -clock MY_CLK [all_outputs]
+
+
+set OLOAD [load_of NangateOpenCellLibrary/BUF_X4/A]
+set_load $OLOAD [all_outputs]
+compile_ultra
+check_design
+
+
+report_timing > ./timing_report/report_timing.txt
+report_area > ./area_report/report_area.txt
+
+change_names -hierarchy -rules verilog
+write_sdf ../netlist/fpnew_top.sdf
+write -f verilog -hierarchy -output ../netlist/fpnew_top.v
+write_sdc ../netlist/fpnew_top.sdc
+quit

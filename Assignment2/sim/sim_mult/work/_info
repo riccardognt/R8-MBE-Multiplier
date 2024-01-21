@@ -1,0 +1,536 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/isa09_2022_2023/lab2/Assignment2/sim/sim_mult
+T_opt
+!s110 1671309101
+V^NaLK2a4H]`Q`ig^An@`73
+04 13 4 work multiplier_tb fast 0
+=1-52540097797c-639e272c-b4693-35d8
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+R0
+vADJUST
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1671477458
+!i10b 1
+!s100 m]H2<nYAI<=c<5>H@9JQV3
+Z4 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ImY6K63RYDFZYNdO=Cf@172
+S1
+R0
+w1671128206
+8../../src/mantissa_multiplier/ADJUST.sv
+F../../src/mantissa_multiplier/ADJUST.sv
+!i122 67
+L0 3 29
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z7 !s108 1671477457.000000
+!s107 ../../src/mantissa_multiplier/ADJUST.sv|
+!s90 -reportprogress|300|-work|work|../../src/mantissa_multiplier/ADJUST.sv|
+!i113 0
+Z8 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+n@a@d@j@u@s@t
+vAU
+R2
+Z9 !s110 1671477459
+!i10b 1
+!s100 3UC_0JIiiQ<GmWchX0ZQZ1
+R4
+I6BJgEf`ESCP^1eeX4dzBG2
+S1
+R0
+w1671317448
+8../../src/mantissa_multiplier/AU.sv
+F../../src/mantissa_multiplier/AU.sv
+!i122 72
+L0 6 54
+R5
+R6
+r1
+!s85 0
+31
+Z10 !s108 1671477459.000000
+!s107 ../../src/mantissa_multiplier/AU.sv|
+!s90 -reportprogress|300|-work|work|../../src/mantissa_multiplier/AU.sv|
+!i113 0
+R8
+R1
+n@a@u
+vBEU
+R2
+Z11 !s110 1671477456
+!i10b 1
+!s100 YDee:Yc>j7DWUfKaZ^lWN1
+R4
+I<83DLMi:Uh3DMePRN=PkL2
+S1
+R0
+w1671134053
+8../../src/mantissa_multiplier/BEU.sv
+F../../src/mantissa_multiplier/BEU.sv
+!i122 62
+Z12 L0 2 25
+R5
+R6
+r1
+!s85 0
+31
+Z13 !s108 1671477456.000000
+!s107 ../../src/mantissa_multiplier/BEU.sv|
+!s90 -reportprogress|300|-work|work|../../src/mantissa_multiplier/BEU.sv|
+!i113 0
+R8
+R1
+n@b@e@u
+vBoothEncoder
+R2
+R11
+!i10b 1
+!s100 FF_k<A9;D@k7Z[X11Z0`M0
+R4
+Inh27TjammNDE0OB2]]3[g1
+S1
+R0
+w1671134103
+8../../src/mantissa_multiplier/BoothEncoder.sv
+F../../src/mantissa_multiplier/BoothEncoder.sv
+!i122 61
+R12
+R5
+R6
+r1
+!s85 0
+31
+R13
+!s107 ../../src/mantissa_multiplier/BoothEncoder.sv|
+!s90 -reportprogress|300|-work|work|../../src/mantissa_multiplier/BoothEncoder.sv|
+!i113 0
+R8
+R1
+n@booth@encoder
+vBoothSelector
+R2
+Z14 !s110 1671477457
+!i10b 1
+!s100 IZLDX>Thin91Y>6EU89Y?2
+R4
+I9WTl<F52<D2nGBVU5^i^00
+S1
+R0
+Z15 w1671134009
+Z16 8../../src/mantissa_multiplier/BoothSelector.sv
+Z17 F../../src/mantissa_multiplier/BoothSelector.sv
+!i122 63
+L0 30 15
+R5
+R6
+r1
+!s85 0
+31
+R7
+Z18 !s107 ../../src/mantissa_multiplier/BoothSelector.sv|
+Z19 !s90 -reportprogress|300|-work|work|../../src/mantissa_multiplier/BoothSelector.sv|
+!i113 0
+R8
+R1
+n@booth@selector
+vBoothSelector_j
+R2
+R14
+!i10b 1
+!s100 bMzzmBKGj]O0mZQga[M1Z2
+R4
+I]@7M::=6j@9T6V`1;f99@3
+S1
+R0
+R15
+R16
+R17
+!i122 63
+R12
+R5
+R6
+r1
+!s85 0
+31
+R7
+R18
+R19
+!i113 0
+R8
+R1
+n@booth@selector_j
+vBSU
+R2
+R14
+!i10b 1
+!s100 <4`=B3K3<?DzYC9Yn6^MP1
+R4
+I_0USeYkT=V5cFidMIgZfE0
+S1
+R0
+w1671133892
+8../../src/mantissa_multiplier/BSU.sv
+F../../src/mantissa_multiplier/BSU.sv
+!i122 64
+L0 2 17
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 ../../src/mantissa_multiplier/BSU.sv|
+!s90 -reportprogress|300|-work|work|../../src/mantissa_multiplier/BSU.sv|
+!i113 0
+R8
+R1
+n@b@s@u
+vcompressor_5_to_3
+R2
+R9
+!i10b 1
+!s100 G?7AG:8WH2JDLNHiP:oYP2
+R4
+IaV;<6Pdz=CVoU6]C7zcc^0
+S1
+R0
+w1671128263
+8../../src/mantissa_multiplier/compressor_5_to_3.sv
+F../../src/mantissa_multiplier/compressor_5_to_3.sv
+!i122 70
+L0 3 11
+R5
+R6
+r1
+!s85 0
+31
+Z20 !s108 1671477458.000000
+Z21 !s107 ../../src/mantissa_multiplier/compressor_5_to_3.sv|../../src/mantissa_multiplier/full_adder.sv|../../src/mantissa_multiplier/half_adder.sv|../../src/mantissa_multiplier/DADDA_STAGE3.sv|
+Z22 !s90 -reportprogress|300|-work|work|../../src/mantissa_multiplier/DADDA_STAGE3.sv|
+!i113 0
+R8
+R1
+vDADDA_STAGE1
+R2
+R3
+!i10b 1
+!s100 ;Dg1?KM0HSI86H?keeWSm2
+R4
+I?Q5^Hh<62McLK<]j6>WF20
+S1
+R0
+w1671124415
+8../../src/mantissa_multiplier/DADDA_STAGE1.sv
+F../../src/mantissa_multiplier/DADDA_STAGE1.sv
+!i122 68
+L0 4 50
+R5
+R6
+r1
+!s85 0
+31
+R20
+!s107 ../../src/mantissa_multiplier/full_adder.sv|../../src/mantissa_multiplier/half_adder.sv|../../src/mantissa_multiplier/DADDA_STAGE1.sv|
+!s90 -reportprogress|300|-work|work|../../src/mantissa_multiplier/DADDA_STAGE1.sv|
+!i113 0
+R8
+R1
+n@d@a@d@d@a_@s@t@a@g@e1
+vDADDA_STAGE2
+R2
+R3
+!i10b 1
+!s100 n^_D5A2jmQKCEf<ZnzTB^0
+R4
+ILGe<X3Da^9d5h8G9RN`NK0
+S1
+R0
+w1671128912
+8../../src/mantissa_multiplier/DADDA_STAGE2.sv
+F../../src/mantissa_multiplier/DADDA_STAGE2.sv
+!i122 69
+L0 5 103
+R5
+R6
+r1
+!s85 0
+31
+R20
+!s107 ../../src/mantissa_multiplier/compressor_5_to_3.sv|../../src/mantissa_multiplier/full_adder.sv|../../src/mantissa_multiplier/half_adder.sv|../../src/mantissa_multiplier/DADDA_STAGE2.sv|
+!s90 -reportprogress|300|-work|work|../../src/mantissa_multiplier/DADDA_STAGE2.sv|
+!i113 0
+R8
+R1
+n@d@a@d@d@a_@s@t@a@g@e2
+vDADDA_STAGE3
+R2
+R9
+!i10b 1
+!s100 Z0W@Bai;Uz4BZ>@4HC^lL3
+R4
+Id]1VSWMzAoM>FNiD9ZecF1
+S1
+R0
+w1671124708
+8../../src/mantissa_multiplier/DADDA_STAGE3.sv
+F../../src/mantissa_multiplier/DADDA_STAGE3.sv
+!i122 70
+L0 5 44
+R5
+R6
+r1
+!s85 0
+31
+R20
+R21
+R22
+!i113 0
+R8
+R1
+n@d@a@d@d@a_@s@t@a@g@e3
+vFINAL_ADDER
+R2
+R9
+!i10b 1
+!s100 GhP3ff3o8gbfY:1o]^Yl>3
+R4
+INSOMDkhhjZzEg@MDcP3:j2
+S1
+R0
+w1671125393
+8../../src/mantissa_multiplier/FINAL_ADDER.sv
+F../../src/mantissa_multiplier/FINAL_ADDER.sv
+!i122 71
+L0 2 9
+R5
+R6
+r1
+!s85 0
+31
+R10
+!s107 ../../src/mantissa_multiplier/FINAL_ADDER.sv|
+!s90 -reportprogress|300|-work|work|../../src/mantissa_multiplier/FINAL_ADDER.sv|
+!i113 0
+R8
+R1
+n@f@i@n@a@l_@a@d@d@e@r
+vfull_adder
+R2
+R9
+!i10b 1
+!s100 <MTS26?W646W_7O5SNc6_2
+R4
+IoMZ8>Tna`7Qm[J3iC_KAU0
+S1
+R0
+w1671124989
+8../../src/mantissa_multiplier/full_adder.sv
+F../../src/mantissa_multiplier/full_adder.sv
+!i122 70
+L0 2 13
+R5
+R6
+r1
+!s85 0
+31
+R20
+R21
+R22
+!i113 0
+R8
+R1
+vhalf_adder
+R2
+R9
+!i10b 1
+!s100 dNBQ:WPjF_5Tb7>6ZF]Dn3
+R4
+IlgI1HiEm2ZnQ1z>9=YUT_3
+S1
+R0
+w1671125199
+8../../src/mantissa_multiplier/half_adder.sv
+F../../src/mantissa_multiplier/half_adder.sv
+!i122 70
+L0 1 12
+R5
+R6
+r1
+!s85 0
+31
+R20
+R21
+R22
+!i113 0
+R8
+R1
+vmantissa_multiplier
+R2
+Z23 !s110 1671477460
+!i10b 1
+!s100 S;_Z>AV?dFcNSnX8BAUWT0
+R4
+IJz<Wd>Ndh^?Kj@Pz3:mCm3
+S1
+R0
+w1671128807
+8../../src/mantissa_multiplier/mantissa_multiplier.sv
+F../../src/mantissa_multiplier/mantissa_multiplier.sv
+!i122 73
+L0 2 19
+R5
+R6
+r1
+!s85 0
+31
+R10
+!s107 ../../src/mantissa_multiplier/mantissa_multiplier.sv|
+!s90 -reportprogress|300|-work|work|../../src/mantissa_multiplier/mantissa_multiplier.sv|
+!i113 0
+R8
+R1
+vmultiplier_tb
+!s105 multiplier_tb_sv_unit
+DXx4 work 21 multiplier_tb_sv_unit 0 22 lHaaFXIfCbQQNFacG4S052
+R2
+R23
+!i10b 1
+!s100 U4E<QMdo^nm:V6LFaLO6V1
+R4
+I9M>^Tgm9<4CZMmGk3_[5h0
+S1
+R0
+Z24 w1671309032
+Z25 8../../tb/multiplier_tb.sv
+Z26 F../../tb/multiplier_tb.sv
+!i122 74
+L0 3 33
+R5
+R6
+r1
+!s85 0
+31
+Z27 !s108 1671477460.000000
+!s107 ../../tb/multiplier_tb.sv|
+Z28 !s90 -reportprogress|300|-work|work|../../tb/multiplier_tb.sv|
+!i113 0
+R8
+R1
+Xmultiplier_tb_sv_unit
+R2
+R23
+VlHaaFXIfCbQQNFacG4S052
+r1
+!s85 0
+!i10b 1
+!s100 ]oXJSP0Cn>0Sl@mCGZ5zF1
+IlHaaFXIfCbQQNFacG4S052
+!i103 1
+S1
+R0
+R24
+R25
+R26
+!i122 74
+L0 37 0
+R6
+31
+R27
+Z29 !s107 ../../tb/multiplier_tb.sv|
+R28
+!i113 0
+R8
+R1
+vpart_prod_top
+R2
+R14
+!i10b 1
+!s100 R^DGdmP_6d0I<Gn9IS7Mj2
+R4
+I?WXTi<DbWhjBOeGoFTnlP1
+S1
+R0
+w1671133720
+8../../src/mantissa_multiplier/part_prod_top.sv
+F../../src/mantissa_multiplier/part_prod_top.sv
+!i122 65
+L0 2 38
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 ../../src/mantissa_multiplier/part_prod_top.sv|
+!s90 -reportprogress|300|-work|work|../../src/mantissa_multiplier/part_prod_top.sv|
+!i113 0
+R8
+R1
+vPPG
+R2
+R11
+!i10b 1
+!s100 F=`=@XNo43SOZ=j9;ED6M3
+R4
+Ied5HnQ5KT`2TCR4]IXl`[0
+S1
+R0
+w1671109407
+8../../src/mantissa_multiplier/PPG.sv
+F../../src/mantissa_multiplier/PPG.sv
+!i122 60
+L0 2 20
+R5
+R6
+r1
+!s85 0
+31
+R13
+!s107 ../../src/mantissa_multiplier/PPG.sv|
+!s90 -reportprogress|300|-work|work|../../src/mantissa_multiplier/PPG.sv|
+!i113 0
+R8
+R1
+n@p@p@g
+vPPRU
+R2
+R14
+!i10b 1
+!s100 SRmh:=5dTCBOzicnJF94z0
+R4
+I:oUUCc=QVd0IhCMXhZYTO1
+S1
+R0
+w1671123171
+8../../src/mantissa_multiplier/PPRU.sv
+F../../src/mantissa_multiplier/PPRU.sv
+!i122 66
+L0 3 22
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 ../../src/mantissa_multiplier/PPRU.sv|
+!s90 -reportprogress|300|-work|work|../../src/mantissa_multiplier/PPRU.sv|
+!i113 0
+R8
+R1
+n@p@p@r@u

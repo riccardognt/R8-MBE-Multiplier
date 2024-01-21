@@ -1,0 +1,259 @@
+# //  Questa Sim-64
+# //  Version 2020.4 linux_x86_64 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 20:17:36 on Dec 19,2022
+# vlog -reportprogress 300 -work work ../../src/mantissa_multiplier/PPG.sv 
+# -- Compiling module PPG
+# 
+# Top level modules:
+# 	PPG
+# End time: 20:17:36 on Dec 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 20:17:36 on Dec 19,2022
+# vlog -reportprogress 300 -work work ../../src/mantissa_multiplier/BoothEncoder.sv 
+# -- Compiling module BoothEncoder
+# 
+# Top level modules:
+# 	BoothEncoder
+# End time: 20:17:36 on Dec 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 20:17:36 on Dec 19,2022
+# vlog -reportprogress 300 -work work ../../src/mantissa_multiplier/BEU.sv 
+# -- Compiling module BEU
+# 
+# Top level modules:
+# 	BEU
+# End time: 20:17:36 on Dec 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 20:17:37 on Dec 19,2022
+# vlog -reportprogress 300 -work work ../../src/mantissa_multiplier/BoothSelector.sv 
+# -- Compiling module BoothSelector_j
+# -- Compiling module BoothSelector
+# 
+# Top level modules:
+# 	BoothSelector
+# End time: 20:17:37 on Dec 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 20:17:37 on Dec 19,2022
+# vlog -reportprogress 300 -work work ../../src/mantissa_multiplier/BSU.sv 
+# -- Compiling module BSU
+# 
+# Top level modules:
+# 	BSU
+# End time: 20:17:37 on Dec 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 20:17:37 on Dec 19,2022
+# vlog -reportprogress 300 -work work ../../src/mantissa_multiplier/part_prod_top.sv 
+# -- Compiling module part_prod_top
+# 
+# Top level modules:
+# 	part_prod_top
+# End time: 20:17:37 on Dec 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 20:17:37 on Dec 19,2022
+# vlog -reportprogress 300 -work work ../../src/mantissa_multiplier/PPRU.sv 
+# -- Compiling module PPRU
+# 
+# Top level modules:
+# 	PPRU
+# End time: 20:17:37 on Dec 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 20:17:37 on Dec 19,2022
+# vlog -reportprogress 300 -work work ../../src/mantissa_multiplier/ADJUST.sv 
+# -- Compiling module ADJUST
+# 
+# Top level modules:
+# 	ADJUST
+# End time: 20:17:38 on Dec 19,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 20:17:38 on Dec 19,2022
+# vlog -reportprogress 300 -work work ../../src/mantissa_multiplier/DADDA_STAGE1.sv 
+# -- Compiling module half_adder
+# -- Compiling module full_adder
+# -- Compiling module DADDA_STAGE1
+# 
+# Top level modules:
+# 	DADDA_STAGE1
+# End time: 20:17:38 on Dec 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 20:17:38 on Dec 19,2022
+# vlog -reportprogress 300 -work work ../../src/mantissa_multiplier/DADDA_STAGE2.sv 
+# -- Compiling module half_adder
+# -- Compiling module full_adder
+# -- Compiling module full_adder
+# ** Warning: ** while parsing file included at ../../src/mantissa_multiplier/DADDA_STAGE2.sv(3)
+# ** while parsing file included at ../../src/mantissa_multiplier/compressor_5_to_3.sv(1)
+# ** at ../../src/mantissa_multiplier/full_adder.sv(2): (vlog-2275) Existing module 'full_adder' at line 2 will be overwritten.
+# -- Compiling module compressor_5_to_3
+# -- Compiling module DADDA_STAGE2
+# 
+# Top level modules:
+# 	DADDA_STAGE2
+# End time: 20:17:38 on Dec 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 20:17:38 on Dec 19,2022
+# vlog -reportprogress 300 -work work ../../src/mantissa_multiplier/DADDA_STAGE3.sv 
+# -- Compiling module half_adder
+# -- Compiling module full_adder
+# -- Compiling module full_adder
+# ** Warning: ** while parsing file included at ../../src/mantissa_multiplier/DADDA_STAGE3.sv(3)
+# ** while parsing file included at ../../src/mantissa_multiplier/compressor_5_to_3.sv(1)
+# ** at ../../src/mantissa_multiplier/full_adder.sv(2): (vlog-2275) Existing module 'full_adder' at line 2 will be overwritten.
+# -- Compiling module compressor_5_to_3
+# -- Compiling module DADDA_STAGE3
+# 
+# Top level modules:
+# 	DADDA_STAGE3
+# End time: 20:17:39 on Dec 19,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 20:17:39 on Dec 19,2022
+# vlog -reportprogress 300 -work work ../../src/mantissa_multiplier/FINAL_ADDER.sv 
+# -- Compiling module FINAL_ADDER
+# 
+# Top level modules:
+# 	FINAL_ADDER
+# End time: 20:17:39 on Dec 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 20:17:39 on Dec 19,2022
+# vlog -reportprogress 300 -work work ../../src/mantissa_multiplier/AU.sv 
+# -- Compiling module AU
+# 
+# Top level modules:
+# 	AU
+# End time: 20:17:39 on Dec 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 20:17:39 on Dec 19,2022
+# vlog -reportprogress 300 -work work ../../src/mantissa_multiplier/mantissa_multiplier.sv 
+# -- Compiling module mantissa_multiplier
+# 
+# Top level modules:
+# 	mantissa_multiplier
+# End time: 20:17:40 on Dec 19,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 20:17:40 on Dec 19,2022
+# vlog -reportprogress 300 -work work ../../tb/multiplier_tb.sv 
+# -- Compiling module multiplier_tb
+# -- Compiling package multiplier_tb_sv_unit
+# 
+# Top level modules:
+# 	multiplier_tb
+# End time: 20:17:40 on Dec 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.multiplier_tb -t ns -voptargs="+acc" 
+# Start time: 20:17:40 on Dec 19,2022
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.multiplier_tb_sv_unit(fast)
+# Loading work.multiplier_tb(fast)
+# Loading work.mantissa_multiplier(fast)
+# Loading work.part_prod_top(fast)
+# Loading work.PPG(fast)
+# Loading work.BEU(fast)
+# Loading work.BoothEncoder(fast)
+# Loading work.BSU(fast)
+# Loading work.BoothSelector(fast)
+# Loading work.BoothSelector_j(fast)
+# Loading work.AU(fast)
+# Loading work.PPRU(fast)
+# Loading work.ADJUST(fast)
+# Loading work.DADDA_STAGE1(fast)
+# Loading work.half_adder(fast)
+# Loading work.full_adder(fast)
+# Loading work.DADDA_STAGE2(fast)
+# Loading work.compressor_5_to_3(fast)
+# Loading work.DADDA_STAGE3(fast)
+# Loading work.FINAL_ADDER(fast)
+# [T=0] operation to be done is: 13240988 * 12456339 	 [2] OK, the result produced is correct
+# the theoretical result is : 164934235222932 
+# the actual result is : 164934235222932 
+# [T=10] operation to be done is: 8487113 * 12970363 	 [12] OK, the result produced is correct
+# the theoretical result is : 110080936432019 
+# the actual result is : 110080936432019 
+# [T=20] operation to be done is: 16375712 * 10156291 	 [22] OK, the result produced is correct
+# the theoretical result is : 166316496404192 
+# the actual result is : 166316496404192 
+# [T=30] operation to be done is: 15051886 * 14591373 	 [32] OK, the result produced is correct
+# the theoretical result is : 219627682979478 
+# the actual result is : 219627682979478 
+# [T=40] operation to be done is: 8430470 * 11021295 	 [42] OK, the result produced is correct
+# the theoretical result is : 92914696858650 
+# the actual result is : 92914696858650 
+# [T=50] operation to be done is: 16002458 * 14744583 	 [52] OK, the result produced is correct
+# the theoretical result is : 235949570185014 
+# the actual result is : 235949570185014 
+# [T=60] operation to be done is: 8576458 * 10914267 	 [62] OK, the result produced is correct
+# the theoretical result is : 93605752526286 
+# the actual result is : 93605752526286 
+# [T=70] operation to be done is: 15867172 * 15678920 	 [72] OK, the result produced is correct
+# the theoretical result is : 248780120414240 
+# the actual result is : 248780120414240 
+# [T=80] operation to be done is: 13919742 * 15036117 	 [82] OK, the result produced is correct
+# the theoretical result is : 209298869321814 
+# the actual result is : 209298869321814 
+# [T=90] operation to be done is: 15687386 * 10446922 	 [92] OK, the result produced is correct
+# the theoretical result is : 163884897925892 
+# the actual result is : 163884897925892 
+# [T=100] operation to be done is: 11899833 * 12542454 	 [102] OK, the result produced is correct
+# the theoretical result is : 149253108010182 
+# the actual result is : 149253108010182 
+# [T=110] operation to be done is: 10747778 * 14836431 	 [112] OK, the result produced is correct
+# the theoretical result is : 159458666700318 
+# the actual result is : 159458666700318 
+# [T=120] operation to be done is: 11521256 * 14526307 	 [122] OK, the result produced is correct
+# the theoretical result is : 167361301681592 
+# the actual result is : 167361301681592 
+# [T=130] operation to be done is: 13331619 * 9302701 	 [132] OK, the result produced is correct
+# the theoretical result is : 124020065402919 
+# the actual result is : 124020065402919 
+# [T=140] operation to be done is: 11659233 * 9142764 	 [142] OK, the result produced is correct
+# the theoretical result is : 106597615740012 
+# the actual result is : 106597615740012 
+# [T=150] operation to be done is: 15274052 * 14883458 	 [152] OK, the result produced is correct
+# the theoretical result is : 227330711431816 
+# the actual result is : 227330711431816 
+# [T=160] operation to be done is: 12753046 * 11158594 	 [162] OK, the result produced is correct
+# the theoretical result is : 142306062577324 
+# the actual result is : 142306062577324 
+# [T=170] operation to be done is: 11701015 * 8477914 	 [172] OK, the result produced is correct
+# the theoretical result is : 99200198882710 
+# the actual result is : 99200198882710 
+# [T=180] operation to be done is: 14708007 * 8395881 	 [182] OK, the result produced is correct
+# the theoretical result is : 123486676519167 
+# the actual result is : 123486676519167 
+# [T=190] operation to be done is: 12441297 * 12651062 	 [192] OK, the result produced is correct
+# the theoretical result is : 157395619707414 
+# the actual result is : 157395619707414 
+# [T=192] simulation ended by reaching max number of tests 20** Note: $stop    : ../../tb/multiplier_tb.sv(25)
+#    Time: 192 ns  Iteration: 0  Instance: /multiplier_tb
+# Break in Module multiplier_tb at ../../tb/multiplier_tb.sv line 25
+# End time: 20:23:45 on Dec 19,2022, Elapsed time: 0:06:05
+# Errors: 0, Warnings: 0

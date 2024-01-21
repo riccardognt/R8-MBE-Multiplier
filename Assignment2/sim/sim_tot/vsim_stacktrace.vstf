@@ -1,0 +1,42 @@
+# Current time Thu Dec 15 21:10:14 2022
+# Program = vsim
+# Id = "2020.4"
+# Version = "2020.10"
+# Date = "Oct 13 2020"
+# Platform = "linux_x86_64"
+# Signature = cf04d75d68edbdd4473860698f2ea8fd
+# 0    0x0000000000c0e210: '<unknown (@0xc0e210)>'
+# 1    0x0000000000c134ac: '<unknown (@0xc134ac)>'
+# 2    0x0000000000c1631f: '<unknown (@0xc1631f)>'
+# 3    0x0000000000ec388d: '<unknown (@0xec388d)>'
+# 4    0x0000000002bdc1b6: '<unknown (@0x2bdc1b6)>'
+# 5    0x0000000002bdd8a1: '<unknown (@0x2bdd8a1)>'
+# 6    0x0000000002bddc06: '<unknown (@0x2bddc06)>'
+# 7    0x00000000011288fd: '<unknown (@0x11288fd)>'
+# 8    0x0000000002c7db0f: '<unknown (@0x2c7db0f)>'
+# 9    0x0000000002cd1687: '<unknown (@0x2cd1687)>'
+# 10   0x0000000002c94577: '<unknown (@0x2c94577)>'
+# 11   0x0000000002c94859: '<unknown (@0x2c94859)>'
+# 12   0x0000000002a976dd: '<unknown (@0x2a976dd)>'
+# 13   0x0000000000bd1358: '<unknown (@0xbd1358)>'
+# 14   0x000000000275de1e: '<unknown (@0x275de1e)>'
+# 15   0x000000000275e6c7: '<unknown (@0x275e6c7)>'
+# 16   0x00000000009fed2d: '<unknown (@0x9fed2d)>'
+# 17   0x00000000009ffb0c: '<unknown (@0x9ffb0c)>'
+# 18   0x0000000000a033c2: '<unknown (@0xa033c2)>'
+# 19   0x0000000000ec9c8f: '<unknown (@0xec9c8f)>'
+# 20   0x0000000000ec388d: '<unknown (@0xec388d)>'
+# 21   0x0000000002bd7d5d: '<unknown (@0x2bd7d5d)>'
+# 22   0x0000000002bdc1b6: '<unknown (@0x2bdc1b6)>'
+# 23   0x0000000002bdd8a1: '<unknown (@0x2bdd8a1)>'
+# 24   0x0000000002bddc06: '<unknown (@0x2bddc06)>'
+# 25   0x0000000001128ad9: '<unknown (@0x1128ad9)>'
+# 26   0x0000000002c7db0f: '<unknown (@0x2c7db0f)>'
+# 27   0x0000000002cd1687: '<unknown (@0x2cd1687)>'
+# 28   0x0000000002c94577: '<unknown (@0x2c94577)>'
+# 29   0x0000000002c94859: '<unknown (@0x2c94859)>'
+# 30   0x0000000002a976dd: '<unknown (@0x2a976dd)>'
+# 31   0x0000000000bd39ec: '<unknown (@0xbd39ec)>'
+# End of Stack Trace
+
+
