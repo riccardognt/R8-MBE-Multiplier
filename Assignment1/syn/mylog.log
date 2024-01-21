@@ -1,0 +1,1514 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version S-2021.06-SP4 for linux64 - Nov 23, 2021 
+
+                    Copyright (c) 1988 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Initializing gui preferences from file  /home/isa09_2022_2023/.synopsys_dc_gui/preferences.tcl
+define_design_lib WORK -path ./work
+1
+analyze -library WORK -format sverilog {../src/cf_math_pkg.sv}
+Running PRESTO HDLC
+Compiling source file ../src/cf_math_pkg.sv
+Warning:  ../src/cf_math_pkg.sv:18: The package cf_math_pkg has already been analyzed. It is being replaced. (VER-26)
+Presto compilation completed successfully.
+Loading db file '/eda/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db'
+Loading db file '/eda/synopsys/2021-22/RHELx86/SYN_2021.06-SP4/libraries/syn/dw_foundation.sldb'
+1
+analyze -library WORK -format sverilog {../src/lzc.sv}
+Running PRESTO HDLC
+Compiling source file ../src/lzc.sv
+Presto compilation completed successfully.
+1
+analyze -library WORK -format sverilog {../src/rr_arb_tree.sv}
+Running PRESTO HDLC
+Compiling source file ../src/rr_arb_tree.sv
+Presto compilation completed successfully.
+1
+analyze -library WORK -format sverilog {../src/fpnew_pkg.sv}
+Running PRESTO HDLC
+Compiling source file ../src/fpnew_pkg.sv
+Warning:  ../src/fpnew_pkg.sv:17: The package fpnew_pkg has already been analyzed. It is being replaced. (VER-26)
+Presto compilation completed successfully.
+1
+analyze -library WORK -format sverilog {../src/fpnew_classifier.sv}
+Running PRESTO HDLC
+Compiling source file ../src/fpnew_classifier.sv
+Presto compilation completed successfully.
+1
+analyze -library WORK -format sverilog {../src/fpnew_rounding.sv}
+Running PRESTO HDLC
+Compiling source file ../src/fpnew_rounding.sv
+Presto compilation completed successfully.
+1
+analyze -library WORK -format sverilog {../src/fpnew_fma.sv}
+Running PRESTO HDLC
+Compiling source file ../src/fpnew_fma.sv
+Opening include file ../src/registers.svh
+Presto compilation completed successfully.
+1
+analyze -library WORK -format sverilog {../src/fpnew_opgroup_fmt_slice.sv}
+Running PRESTO HDLC
+Compiling source file ../src/fpnew_opgroup_fmt_slice.sv
+Presto compilation completed successfully.
+1
+analyze -library WORK -format sverilog {../src/fpnew_opgroup_block.sv}
+Running PRESTO HDLC
+Compiling source file ../src/fpnew_opgroup_block.sv
+Presto compilation completed successfully.
+1
+analyze -library WORK -format sverilog {../src/fpnew_top.sv}
+Running PRESTO HDLC
+Compiling source file ../src/fpnew_top.sv
+Presto compilation completed successfully.
+1
+set power_preserve_rtl_hier_names true
+true
+elaborate fpnew_top -lib WORK
+Loading db file '/eda/synopsys/2021-22/RHELx86/SYN_2021.06-SP4/libraries/syn/gtech.db'
+Loading db file '/eda/synopsys/2021-22/RHELx86/SYN_2021.06-SP4/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ../src/fpnew_pkg.sv:391: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 83 in file
+	'../src/fpnew_top.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           380            |    user/user     |
+===============================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|   fpnew_top/83   |   4    |    1    |      2       |
+======================================================
+Presto compilation completed successfully. (fpnew_top)
+Elaborated 1 design.
+Current design is now 'fpnew_top'.
+Information: Building the design 'fpnew_opgroup_block' instantiated from design 'fpnew_top' with
+	the parameters "OpGroup=2'h0,Width=32'h00000020,EnableVectors=1'h0,FpFmtMask=5'h10,IntFmtMask=4'h2,FmtPipeRegs=160'h0000000300000003000000030000000300000003@parray[31:0][0:4],FmtUnitTypes=10'h155@parray[1:0][0:4],PipeConfig=2'h3,TagType="logic%Z@1yB@&"". (HDL-193)
+Warning:  ../src/fpnew_pkg.sv:391: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Presto compilation completed successfully. (fpnew_opgroup_block_0_00000020_0_10_2_155_3__logic_Z_1yB__622949)
+Information: Building the design 'fpnew_opgroup_block' instantiated from design 'fpnew_top' with
+	the parameters "OpGroup=2'h1,Width=32'h00000020,EnableVectors=1'h0,FpFmtMask=5'h10,IntFmtMask=4'h2,FmtPipeRegs=160'h0000000300000003000000030000000300000003@parray[31:0][0:4],FmtUnitTypes=10'h000@parray[1:0][0:4],PipeConfig=2'h3,TagType="logic%Z@1yB@&"". (HDL-193)
+Warning:  ../src/fpnew_pkg.sv:391: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Presto compilation completed successfully. (fpnew_opgroup_block_1_00000020_0_10_2_000_3__logic_Z_1yB__622949)
+Information: Building the design 'fpnew_opgroup_block' instantiated from design 'fpnew_top' with
+	the parameters "OpGroup=2'h2,Width=32'h00000020,EnableVectors=1'h0,FpFmtMask=5'h10,IntFmtMask=4'h2,FmtPipeRegs=160'h0000000300000003000000030000000300000003@parray[31:0][0:4],FmtUnitTypes=10'h000@parray[1:0][0:4],PipeConfig=2'h3,TagType="logic%Z@1yB@&"". (HDL-193)
+Warning:  ../src/fpnew_pkg.sv:391: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Presto compilation completed successfully. (fpnew_opgroup_block_2_00000020_0_10_2_000_3__logic_Z_1yB__622949)
+Information: Building the design 'fpnew_opgroup_block' instantiated from design 'fpnew_top' with
+	the parameters "OpGroup=2'h3,Width=32'h00000020,EnableVectors=1'h0,FpFmtMask=5'h10,IntFmtMask=4'h2,FmtPipeRegs=160'h0000000300000003000000030000000300000003@parray[31:0][0:4],FmtUnitTypes=10'h000@parray[1:0][0:4],PipeConfig=2'h3,TagType="logic%Z@1yB@&"". (HDL-193)
+Warning:  ../src/fpnew_pkg.sv:391: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Presto compilation completed successfully. (fpnew_opgroup_block_3_00000020_0_10_2_000_3__logic_Z_1yB__622949)
+Information: Building the design 'rr_arb_tree' instantiated from design 'fpnew_top' with
+	the parameters "NumIn=32'h00000004,DataType="struct(0%fpnew_top:_Pr0o09Q3Si%(result%sywREG%array(0%31%0%logic))(status%sywREG%struct(0%fpnew_pkg:_Pr01Lyh25i%(NV%sywREG%logic)(DZ%sywREG%logic)(OF%sywREG%logic)(UF%sywREG%logic)(NX%sywREG%logic)))(tag%sywREG%logic))%O0WTy6a",AxiVldRdy=1'h1". (HDL-193)
+Warning:  ../src/rr_arb_tree.sv:210: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine rr_arb_tree_00000004_1_635242 line 238 in file
+		'../src/rr_arb_tree.sv'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| gen_arbiter.rr_q_reg | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+Presto compilation completed successfully. (rr_arb_tree_00000004_1_635242)
+Information: Building the design 'fpnew_opgroup_fmt_slice' instantiated from design 'fpnew_opgroup_block_0_00000020_0_10_2_155_3__logic_Z_1yB__622949' with
+	the parameters "OpGroup=2'h0,FpFormat=3'h0,Width=32'h00000020,EnableVectors=1'h0,NumPipeRegs=32'h00000003,PipeConfig=2'h3,TagType="logic%Z@1yB@&"". (HDL-193)
+Warning:  ../src/fpnew_opgroup_fmt_slice.sv:249: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../src/fpnew_pkg.sv:391: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Presto compilation completed successfully. (fpnew_opgroup_fmt_slice_0_0_00000020_0_00000003_3__logic_Z_1yB_)
+Information: Building the design 'rr_arb_tree' instantiated from design 'fpnew_opgroup_block_0_00000020_0_10_2_155_3__logic_Z_1yB__622949' with
+	the parameters "NumIn=32'h00000005,DataType="struct(0%fpnew_opgroup_block_0_00000020_0_10_2_155_3__logic_Z_1yB__622949:_Pr0OIIBAMa%(result%sywREG%array(0%31%0%logic))(status%sywREG%struct(0%fpnew_pkg:_Pr01Lyh25i%(NV%sywREG%logic)(DZ%sywREG%logic)(OF%sywREG%logic)(UF%sywREG%logic)(NX%sywREG%logic)))(ext_bit%sywREG%logic)(tag%sywREG%logic))%3C@v3fa",AxiVldRdy=1'h1". (HDL-193)
+Warning:  ../src/rr_arb_tree.sv:210: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine rr_arb_tree_00000005_1_064242 line 238 in file
+		'../src/rr_arb_tree.sv'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| gen_arbiter.rr_q_reg | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+Presto compilation completed successfully. (rr_arb_tree_00000005_1_064242)
+Information: Building the design 'rr_arb_tree' instantiated from design 'fpnew_opgroup_block_1_00000020_0_10_2_000_3__logic_Z_1yB__622949' with
+	the parameters "NumIn=32'h00000005,DataType="struct(0%fpnew_opgroup_block_1_00000020_0_10_2_000_3__logic_Z_1yB__622949:_Pr0OIIBAMa%(result%sywREG%array(0%31%0%logic))(status%sywREG%struct(0%fpnew_pkg:_Pr01Lyh25i%(NV%sywREG%logic)(DZ%sywREG%logic)(OF%sywREG%logic)(UF%sywREG%logic)(NX%sywREG%logic)))(ext_bit%sywREG%logic)(tag%sywREG%logic))%x0Chfsi",AxiVldRdy=1'h1". (HDL-193)
+Warning:  ../src/rr_arb_tree.sv:210: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine rr_arb_tree_00000005_1_328242 line 238 in file
+		'../src/rr_arb_tree.sv'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| gen_arbiter.rr_q_reg | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+Presto compilation completed successfully. (rr_arb_tree_00000005_1_328242)
+Information: Building the design 'rr_arb_tree' instantiated from design 'fpnew_opgroup_block_2_00000020_0_10_2_000_3__logic_Z_1yB__622949' with
+	the parameters "NumIn=32'h00000005,DataType="struct(0%fpnew_opgroup_block_2_00000020_0_10_2_000_3__logic_Z_1yB__622949:_Pr0OIIBAMa%(result%sywREG%array(0%31%0%logic))(status%sywREG%struct(0%fpnew_pkg:_Pr01Lyh25i%(NV%sywREG%logic)(DZ%sywREG%logic)(OF%sywREG%logic)(UF%sywREG%logic)(NX%sywREG%logic)))(ext_bit%sywREG%logic)(tag%sywREG%logic))%Zs56&nd",AxiVldRdy=1'h1". (HDL-193)
+Warning:  ../src/rr_arb_tree.sv:210: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine rr_arb_tree_00000005_1_236242 line 238 in file
+		'../src/rr_arb_tree.sv'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| gen_arbiter.rr_q_reg | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+Presto compilation completed successfully. (rr_arb_tree_00000005_1_236242)
+Information: Building the design 'rr_arb_tree' instantiated from design 'fpnew_opgroup_block_3_00000020_0_10_2_000_3__logic_Z_1yB__622949' with
+	the parameters "NumIn=32'h00000005,DataType="struct(0%fpnew_opgroup_block_3_00000020_0_10_2_000_3__logic_Z_1yB__622949:_Pr0OIIBAMa%(result%sywREG%array(0%31%0%logic))(status%sywREG%struct(0%fpnew_pkg:_Pr01Lyh25i%(NV%sywREG%logic)(DZ%sywREG%logic)(OF%sywREG%logic)(UF%sywREG%logic)(NX%sywREG%logic)))(ext_bit%sywREG%logic)(tag%sywREG%logic))%32oq8Zi",AxiVldRdy=1'h1". (HDL-193)
+Warning:  ../src/rr_arb_tree.sv:210: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine rr_arb_tree_00000005_1_072242 line 238 in file
+		'../src/rr_arb_tree.sv'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| gen_arbiter.rr_q_reg | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+Presto compilation completed successfully. (rr_arb_tree_00000005_1_072242)
+Information: Building the design 'lzc' instantiated from design 'rr_arb_tree_00000004_1_635242' with
+	the parameters "WIDTH=32'h00000004,MODE=1'h0". (HDL-193)
+Presto compilation completed successfully. (lzc_00000004_0)
+Information: Building the design 'fpnew_fma' instantiated from design 'fpnew_opgroup_fmt_slice_0_0_00000020_0_00000003_3__logic_Z_1yB_' with
+	the parameters "FpFormat=3'h0,NumPipeRegs=32'h00000003,PipeConfig=2'h3,TagType="logic%Z@1yB@&",AuxType="logic%Z@1yB@&"". (HDL-193)
+Warning:  ../src/fpnew_fma.sv:144: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../src/fpnew_fma.sv:460: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../src/fpnew_fma.sv:665: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../src/fpnew_fma.sv:416: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../src/fpnew_fma.sv:417: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../src/fpnew_fma.sv:418: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../src/fpnew_fma.sv:463: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../src/fpnew_fma.sv:464: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../src/fpnew_fma.sv:465: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../src/fpnew_fma.sv:581: signed to unsigned part selection occurs. (VER-318)
+
+Statistics for case statements in always block at line 176 in file
+	'../src/fpnew_fma.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           189            |    user/user     |
+===============================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 133 in file
+		'../src/fpnew_fma.sv'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| inp_pipe_valid_q_reg | Flip-flop |   1   |  N  | N  | Y  | N  | Y  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 137 in file
+		'../src/fpnew_fma.sv'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| inp_pipe_operands_q_reg | Flip-flop |  96   |  Y  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 138 in file
+		'../src/fpnew_fma.sv'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| inp_pipe_is_boxed_q_reg | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 139 in file
+		'../src/fpnew_fma.sv'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| inp_pipe_rnd_mode_q_reg | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 140 in file
+		'../src/fpnew_fma.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  inp_pipe_op_q_reg  | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 141 in file
+		'../src/fpnew_fma.sv'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+| inp_pipe_op_mod_q_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+=================================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 142 in file
+		'../src/fpnew_fma.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| inp_pipe_tag_q_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 143 in file
+		'../src/fpnew_fma.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| inp_pipe_aux_q_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 442 in file
+		'../src/fpnew_fma.sv'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| mid_pipe_valid_q_reg | Flip-flop |   1   |  N  | N  | Y  | N  | Y  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 446 in file
+		'../src/fpnew_fma.sv'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| mid_pipe_eff_sub_q_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 447 in file
+		'../src/fpnew_fma.sv'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| mid_pipe_exp_prod_q_reg | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 448 in file
+		'../src/fpnew_fma.sv'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| mid_pipe_exp_diff_q_reg | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 449 in file
+		'../src/fpnew_fma.sv'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| mid_pipe_tent_exp_q_reg | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 450 in file
+		'../src/fpnew_fma.sv'.
+====================================================================================
+|      Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+====================================================================================
+| mid_pipe_add_shamt_q_reg | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+====================================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 451 in file
+		'../src/fpnew_fma.sv'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+| mid_pipe_sticky_q_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+=================================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 452 in file
+		'../src/fpnew_fma.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| mid_pipe_sum_q_reg  | Flip-flop |  76   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 453 in file
+		'../src/fpnew_fma.sv'.
+=====================================================================================
+|       Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================
+| mid_pipe_final_sign_q_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+=====================================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 454 in file
+		'../src/fpnew_fma.sv'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| mid_pipe_rnd_mode_q_reg | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 455 in file
+		'../src/fpnew_fma.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+| mid_pipe_res_is_spec_q_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 456 in file
+		'../src/fpnew_fma.sv'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| mid_pipe_spec_res_q_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 457 in file
+		'../src/fpnew_fma.sv'.
+====================================================================================
+|      Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+====================================================================================
+| mid_pipe_spec_stat_q_reg | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+====================================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 458 in file
+		'../src/fpnew_fma.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| mid_pipe_tag_q_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 459 in file
+		'../src/fpnew_fma.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| mid_pipe_aux_q_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 657 in file
+		'../src/fpnew_fma.sv'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| out_pipe_valid_q_reg | Flip-flop |   1   |  N  | N  | Y  | N  | Y  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 661 in file
+		'../src/fpnew_fma.sv'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+| out_pipe_result_q_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+=================================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 662 in file
+		'../src/fpnew_fma.sv'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+| out_pipe_status_q_reg | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+=================================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 663 in file
+		'../src/fpnew_fma.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| out_pipe_tag_q_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_ line 664 in file
+		'../src/fpnew_fma.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| out_pipe_aux_q_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_)
+Information: Building the design 'lzc' instantiated from design 'rr_arb_tree_00000005_1_064242' with
+	the parameters "WIDTH=32'h00000005,MODE=1'h0". (HDL-193)
+Presto compilation completed successfully. (lzc_00000005_0)
+Information: Building the design 'fpnew_classifier' instantiated from design 'fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_' with
+	the parameters "FpFormat=3'h0,NumOperands=3". (HDL-193)
+Presto compilation completed successfully. (fpnew_classifier_0_3)
+Information: Building the design 'lzc' instantiated from design 'fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_' with
+	the parameters "WIDTH=32'h00000033,MODE=1". (HDL-193)
+Presto compilation completed successfully. (lzc_00000033_1)
+Information: Building the design 'fpnew_rounding' instantiated from design 'fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB_' with
+	the parameters "AbsWidth=32'h0000001f". (HDL-193)
+Warning:  ../src/fpnew_rounding.sv:47: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 44 in file
+	'../src/fpnew_rounding.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            45            |    user/user     |
+|            47            |    user/user     |
+===============================================
+Presto compilation completed successfully. (fpnew_rounding_0000001f)
+1
+uniquify
+Information: Uniquified 2 instances of design 'lzc_00000004_0'. (OPT-1056)
+Information: Uniquified 8 instances of design 'lzc_00000005_0'. (OPT-1056)
+1
+link
+
+  Linking design 'fpnew_top'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (25 designs)              /home/isa09_2022_2023/lab2/Assignment1/syn/fpnew_top.db, etc
+  NangateOpenCellLibrary (library) /eda/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db
+  dw_foundation.sldb (library) /eda/synopsys/2021-22/RHELx86/SYN_2021.06-SP4/libraries/syn/dw_foundation.sldb
+
+1
+create_clock -name MY_CLK -period 7.24 clk_i
+1
+set_dont_touch_network MY_CLK
+1
+set_clock_uncertainty 0.07 [get_clocks MY_CLK]
+1
+set_input_delay 0.5 -max -clock MY_CLK [remove_from_collection [all_inputs] clk_i]
+1
+set_output_delay 0.5 -max -clock MY_CLK [all_outputs]
+1
+ungroup -all -flatten
+Information: Updating graph... (UID-83)
+Warning: Design 'fpnew_top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+1
+set_implementation DW02_mult/pparch [find cell *mult* ]
+1
+set OLOAD [load_of NangateOpenCellLibrary/BUF_X4/A]
+3.40189
+set_load $OLOAD [all_outputs]
+1
+compile
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | S-2021.06-DWBB_202106.4 |     *     |
+| Licensed DW Building Blocks        | S-2021.06-DWBB_202106.4 |     *     |
+============================================================================
+
+============================================================================
+| Flow Information                                                         |
+----------------------------------------------------------------------------
+| Flow         | Design Compiler                                           |
+============================================================================
+| Design Information                                      | Value          |
+============================================================================
+| Number of Scenarios                                     | 0              |
+| Leaf Cell Count                                         | 2597           |
+| Number of User Hierarchies                              | 0              |
+| Sequential Cell Count                                   | 324            |
+| Macro Count                                             | 0              |
+| Number of Power Domains                                 | 0              |
+| Design with UPF Data                                    | false          |
+============================================================================
+
+Information: There are 67 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'fpnew_top'
+Information: The register 'i_arbiter/gen_arbiter.rr_q_reg[1]' will be removed. (OPT-1207)
+Information: The register 'i_arbiter/gen_arbiter.rr_q_reg[0]' will be removed. (OPT-1207)
+Information: The register 'gen_operation_groups[3].i_opgroup_block/i_arbiter/gen_arbiter.rr_q_reg[2]' will be removed. (OPT-1207)
+Information: The register 'gen_operation_groups[3].i_opgroup_block/i_arbiter/gen_arbiter.rr_q_reg[1]' will be removed. (OPT-1207)
+Information: The register 'gen_operation_groups[3].i_opgroup_block/i_arbiter/gen_arbiter.rr_q_reg[0]' will be removed. (OPT-1207)
+Information: The register 'gen_operation_groups[2].i_opgroup_block/i_arbiter/gen_arbiter.rr_q_reg[2]' will be removed. (OPT-1207)
+Information: The register 'gen_operation_groups[2].i_opgroup_block/i_arbiter/gen_arbiter.rr_q_reg[1]' will be removed. (OPT-1207)
+Information: The register 'gen_operation_groups[2].i_opgroup_block/i_arbiter/gen_arbiter.rr_q_reg[0]' will be removed. (OPT-1207)
+Information: The register 'gen_operation_groups[1].i_opgroup_block/i_arbiter/gen_arbiter.rr_q_reg[2]' will be removed. (OPT-1207)
+Information: The register 'gen_operation_groups[1].i_opgroup_block/i_arbiter/gen_arbiter.rr_q_reg[1]' will be removed. (OPT-1207)
+Information: The register 'gen_operation_groups[1].i_opgroup_block/i_arbiter/gen_arbiter.rr_q_reg[0]' will be removed. (OPT-1207)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/i_arbiter/gen_arbiter.rr_q_reg[2]' will be removed. (OPT-1207)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/i_arbiter/gen_arbiter.rr_q_reg[1]' will be removed. (OPT-1207)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/i_arbiter/gen_arbiter.rr_q_reg[0]' will be removed. (OPT-1207)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/out_pipe_aux_q_reg[1]' will be removed. (OPT-1207)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/inp_pipe_aux_q_reg[1]' will be removed. (OPT-1207)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_aux_q_reg[1]' will be removed. (OPT-1207)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_spec_stat_q_reg[1][DZ]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_spec_stat_q_reg[1][OF]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_spec_stat_q_reg[1][UF]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_spec_stat_q_reg[1][NX]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_spec_res_q_reg[1][mantissa][21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_spec_res_q_reg[1][mantissa][20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_spec_res_q_reg[1][mantissa][19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_spec_res_q_reg[1][mantissa][18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_spec_res_q_reg[1][mantissa][17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_spec_res_q_reg[1][mantissa][16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_spec_res_q_reg[1][mantissa][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_spec_res_q_reg[1][mantissa][14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_spec_res_q_reg[1][mantissa][13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_spec_res_q_reg[1][mantissa][12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_spec_res_q_reg[1][mantissa][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_spec_res_q_reg[1][mantissa][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_spec_res_q_reg[1][mantissa][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_spec_res_q_reg[1][mantissa][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_spec_res_q_reg[1][mantissa][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_spec_res_q_reg[1][mantissa][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_spec_res_q_reg[1][mantissa][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_spec_res_q_reg[1][mantissa][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_spec_res_q_reg[1][mantissa][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_spec_res_q_reg[1][mantissa][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_spec_res_q_reg[1][mantissa][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_spec_res_q_reg[1][mantissa][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/inp_pipe_op_q_reg[1][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/inp_pipe_op_q_reg[1][3]' is a constant and will be removed. (OPT-1206)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'fpnew_top_DW01_add_0'
+  Mapping 'fpnew_top_DW_cmp_0'
+  Processing 'fpnew_top_DW01_dec_0'
+  Processing 'fpnew_top_DW01_inc_0'
+  Mapping 'fpnew_top_DW_cmp_1'
+  Mapping 'DW_leftsh'
+Information: Added key list 'DesignWare' to design 'fpnew_top'. (DDB-72)
+  Processing 'fpnew_top_DW01_add_1'
+  Processing 'fpnew_top_DW01_add_2'
+  Mapping 'fpnew_top_DW_cmp_2'
+  Mapping 'fpnew_top_DW_cmp_3'
+  Mapping 'fpnew_top_DW_cmp_4'
+  Processing 'fpnew_top_DW01_sub_0'
+  Processing 'fpnew_top_DW01_add_3'
+  Mapping 'DW_rightsh'
+  Mapping 'fpnew_top_DW02_mult_0'
+  Processing 'fpnew_top_DW01_sub_1'
+  Mapping 'fpnew_top_DW_cmp_5'
+  Mapping 'fpnew_top_DW_cmp_6'
+  Mapping 'fpnew_top_DW_cmp_7'
+  Processing 'fpnew_top_DW01_sub_2'
+  Processing 'fpnew_top_DW01_add_4'
+  Building model 'DW01_NAND2'
+  Processing 'DW01_NAND2'
+  Building model 'DW01_add_width10' (rpl)
+  Processing 'DW01_add_width10'
+  Building model 'DW01_sub_width10' (rpl)
+  Processing 'DW01_sub_width10'
+  Building model 'DW01_sub_width11' (rpl)
+  Processing 'DW01_sub_width11'
+  Building model 'DW01_inc_width12' (rpl)
+  Processing 'DW01_inc_width12'
+  Building model 'DW01_inc_width10' (rpl)
+  Processing 'DW01_inc_width10'
+  Processing 'fpnew_top_DW01_add_5'
+  Processing 'fpnew_top_DW01_add_6'
+  Processing 'fpnew_top_DW01_sub_3'
+  Processing 'fpnew_top_DW01_inc_1'
+  Processing 'fpnew_top_DW01_sub_4'
+  Processing 'fpnew_top_DW01_inc_2'
+  Processing 'fpnew_top_DW01_sub_5'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+Information: The register 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/out_pipe_status_q_reg[1][DZ]' is a constant and will be removed. (OPT-1206)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:29    9900.0      2.30     187.0     180.0                          
+    0:00:30    9864.3      2.40     194.7     180.0                          
+    0:00:30    9864.3      2.40     194.7     180.0                          
+    0:00:30    9864.3      2.40     194.7     180.0                          
+    0:00:30    9864.3      2.40     194.7     180.0                          
+    0:00:33    7042.4      1.39     105.7      40.7                          
+    0:00:33    6998.5      1.32     101.2      40.7                          
+    0:00:34    6999.3      1.30      99.8      40.7                          
+    0:00:34    6999.3      1.30      99.8      40.7                          
+    0:00:34    6999.3      1.30      99.8      40.7                          
+    0:00:34    6999.3      1.30      99.8      40.7                          
+    0:00:34    6999.3      1.30      99.8      40.7                          
+    0:00:35    7001.4      1.30      99.8       0.0                          
+    0:00:35    7001.4      1.30      99.8       0.0                          
+    0:00:35    7001.4      1.30      99.8       0.0                          
+    0:00:35    7001.4      1.30      99.8       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:35    7001.4      1.30      99.8       0.0                          
+    0:00:35    7025.6      1.23      94.4       6.7 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][75]/D
+    0:00:35    7043.4      1.09      84.0       6.7 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][9]/D
+    0:00:36    7061.8      0.97      73.0      37.8 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][74]/D
+    0:00:36    7067.1      0.93      70.6      37.8 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][74]/D
+    0:00:37    7074.8      0.89      68.7      37.8 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][74]/D
+    0:00:37    7096.6      0.74      54.9      37.8 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][75]/D
+    0:00:37    7101.7      0.72      54.8      37.8 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][71]/D
+    0:00:38    7103.8      0.69      49.3      37.8 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][70]/D
+    0:00:38    7108.9      0.66      46.3      37.8 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][71]/D
+    0:00:38    7111.5      0.64      46.2      37.8 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][71]/D
+    0:00:38    7113.1      0.63      46.1      37.8 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][75]/D
+    0:00:39    7119.2      0.60      43.8      37.8 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][75]/D
+    0:00:39    7137.8      0.53      36.6      37.8 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][75]/D
+    0:00:40    7151.9      0.48      32.2      37.8 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][75]/D
+    0:00:40    7161.5      0.46      31.8      37.8 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][75]/D
+    0:00:40    7170.6      0.46      30.9      37.8 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][75]/D
+    0:00:41    7174.8      0.44      29.9      37.8 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][75]/D
+    0:00:41    7179.1      0.42      29.5      37.8 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][71]/D
+    0:00:41    7200.1      0.39      27.8      31.1 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][75]/D
+    0:00:42    7202.0      0.36      24.9      31.1 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][75]/D
+    0:00:42    7207.3      0.34      22.4      31.1 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][75]/D
+    0:00:42    7216.8      0.33      22.4      69.5 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][75]/D
+    0:00:43    7235.7      0.28      18.2      69.5 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][75]/D
+    0:00:43    7242.4      0.27      17.5      69.5 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][75]/D
+    0:00:43    7245.3      0.26      17.5      69.5 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][75]/D
+    0:00:43    7248.0      0.26      17.3      69.5 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][75]/D
+    0:00:44    7258.3      0.26      17.3      69.5 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][72]/D
+    0:00:44    7281.0      0.24      15.0     109.0 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][73]/D
+    0:00:44    7290.8      0.21      14.7     109.0 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][75]/D
+    0:00:45    7292.1      0.20      11.6     109.0 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][75]/D
+    0:00:45    7311.8      0.19      11.4     109.0 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][75]/D
+    0:00:45    7313.9      0.18      11.2     109.0 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][75]/D
+    0:00:46    7336.0      0.10       5.1     109.0 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][75]/D
+    0:00:46    7337.1      0.10       4.8     109.0 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][75]/D
+    0:00:47    7357.3      0.05       1.2     109.0 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][75]/D
+    0:00:47    7377.5      0.03       0.2     109.0 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][68]/D
+    0:00:47    7381.0      0.03       0.2     109.0 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][69]/D
+    0:00:48    7381.8      0.03       0.2     109.0 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][70]/D
+    0:00:48    7382.0      0.02       0.2     109.0 gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mid_pipe_sum_q_reg[1][75]/D
+    0:00:48    7392.7      0.00       0.0     113.9                          
+    0:00:49    7370.3      0.00       0.0     113.9                          
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:49    7370.3      0.00       0.0     113.9                          
+    0:00:49    7346.7      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:49    7346.7      0.00       0.0       0.0                          
+    0:00:49    7346.7      0.00       0.0       0.0                          
+    0:00:50    7269.8      0.00       0.0       0.0                          
+    0:00:50    7252.0      0.00       0.0       0.0                          
+    0:00:51    7242.9      0.00       0.0       0.0                          
+    0:00:51    7240.0      0.00       0.0       0.0                          
+    0:00:51    7237.9      0.01       0.0       0.0                          
+    0:00:51    7237.9      0.01       0.0       0.0                          
+    0:00:51    7239.7      0.00       0.0       0.0                          
+    0:00:51    7172.4      0.00       0.0       0.0                          
+    0:00:51    7158.3      0.00       0.0       0.0                          
+    0:00:51    7158.1      0.00       0.0       0.0                          
+    0:00:51    7158.1      0.00       0.0       0.0                          
+    0:00:51    7158.1      0.00       0.0       0.0                          
+    0:00:51    7158.1      0.00       0.0       0.0                          
+    0:00:51    7158.1      0.00       0.0       0.0                          
+    0:00:51    7158.1      0.00       0.0       0.0                          
+    0:00:52    7158.1      0.00       0.0       0.0                          
+Loading db file '/eda/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+optimize_registers
+  Loading design 'fpnew_top'
+
+  Beginning retiming
+  ------------------
+Information: Updating design information... (UID-85)
+  Retiming fpnew_top (top)
+  Preferred flip-flop is DFFRS_X1 with setup = 0.04
+
+Warning: The following cells only drive
+	asynchronous pins of sequential cells which have no
+	timing constraint. Therefore retiming will not optimize
+	delay through them:
+	U1633 (BUF_X1)
+	U1632 (BUF_X1)
+	U1625 (BUF_X1)
+	U1623 (BUF_X1)
+	U1620 (BUF_X1)
+	U1619 (BUF_X1)
+	U1618 (BUF_X1)
+	U1617 (BUF_X1)
+	U1631 (BUF_X1)
+	U1616 (BUF_X1)
+	U1630 (BUF_X1)
+	U1615 (BUF_X1)
+	U1614 (BUF_X1)
+	U1629 (BUF_X1)
+	U1622 (BUF_X1)
+	U1613 (BUF_X1)
+	U1612 (BUF_X1)
+	U1611 (BUF_X1)
+	U1610 (BUF_X1)
+	U1627 (BUF_X1)
+	U1628 (BUF_X1)
+	U1626 (BUF_X1)
+	U1624 (BUF_X1)
+	U1621 (BUF_X1)
+	U1490 (BUF_X1)
+	U1494 (BUF_X1)
+	U1489 (BUF_X1)
+	U1493 (BUF_X1)
+	U1492 (BUF_X1)
+	U1491 (BUF_X1)
+	U1496 (BUF_X1)
+	U1495 (BUF_X1)
+	U1671 (BUF_X1)
+	U1498 (BUF_X1)
+	U1497 (BUF_X1)
+
+ (RTDC-115)
+
+  Retiming base-clock MY_CLK, rising edge.
+  Beginning minimum period retiming ...
+  ... minimum period retiming done.
+  Beginning minimum area retiming step 1 ...
+  ... minimum area retiming step 1 done.
+  Beginning minimum area retiming step 2 ...
+  5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100% 
+  ... minimum area retiming step 2 done.
+  Beginning minimum area retiming step 3 ...
+  10% 20% 30% 40% 50% 60% 70% ... 100% 
+  ... minimum area retiming step 3 done.
+  Beginning final register move ...
+  ... final register move done.
+  Lower bound estimate = 7.08
+  Critical path length = 7.08
+  Clock correction = 0.19 (clock-to-Q delay = 0.09, setup = 0.04, uncertainty = 0.07)
+Warning: Design 'fpnew_top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+
+  Retiming complete
+  -----------------
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+============================================================================
+| Flow Information                                                         |
+----------------------------------------------------------------------------
+| Flow         | Design Compiler                                           |
+============================================================================
+| Design Information                                      | Value          |
+============================================================================
+| Number of Scenarios                                     | 0              |
+| Leaf Cell Count                                         | 4511           |
+| Number of User Hierarchies                              | 9              |
+| Sequential Cell Count                                   | 312            |
+| Macro Count                                             | 0              |
+| Number of Power Domains                                 | 0              |
+| Design with UPF Data                                    | false          |
+============================================================================
+
+Information: There are 322 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Loading db file '/eda/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db'
+Loaded alib file './alib-52/NangateOpenCellLibrary_typical_ecsm_nowlm.db.alib'
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:04    7600.2      0.00       0.0    1021.9                           163981.7500
+    0:00:04    7600.2      0.00       0.0    1021.9                           163981.7500
+
+  Beginning Mapping Optimizations  (Ultra High effort)  (Incremental)
+  -------------------------------
+
+  Beginning Incremental Implementation Selection
+  ----------------------------------------------
+Warning: Current implementation 'rpl' of module 'DW01_add'
+	was not found in the files of synthetic_library.
+	Implementation selection of synthetic design
+	'fpnew_top_DW01_add_0' (cell 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63') will take longer. (SYNH-22)
+Warning: Current implementation 'rpl' of module 'DW01_sub'
+	was not found in the files of synthetic_library.
+	Implementation selection of synthetic design
+	'fpnew_top_DW01_sub_0' (cell 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372') will take longer. (SYNH-22)
+Warning: Current implementation 'rpl' of module 'DW01_add'
+	was not found in the files of synthetic_library.
+	Implementation selection of synthetic design
+	'fpnew_top_DW01_add_3' (cell 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2') will take longer. (SYNH-22)
+Warning: Current implementation 'rpl' of module 'DW01_sub'
+	was not found in the files of synthetic_library.
+	Implementation selection of synthetic design
+	'fpnew_top_DW01_sub_2' (cell 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_293') will take longer. (SYNH-22)
+Warning: Current implementation 'rpl' of module 'DW01_add'
+	was not found in the files of synthetic_library.
+	Implementation selection of synthetic design
+	'fpnew_top_DW01_add_6' (cell 'add_1_root_add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_287') will take longer. (SYNH-22)
+Warning: Current implementation 'rpl' of module 'DW01_sub'
+	was not found in the files of synthetic_library.
+	Implementation selection of synthetic design
+	'fpnew_top_DW01_sub_5' (cell 'sub_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_515') will take longer. (SYNH-22)
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:06    7600.2      0.00       0.0    1021.9                           163981.7500
+    0:00:06    8095.4      0.00       0.0       0.0                           190162.8438
+    0:00:08    7471.1      0.00       0.0       0.0                           155187.7188
+    0:00:08    7471.1      0.00       0.0       0.0                           155187.7188
+    0:00:08    7471.1      0.00       0.0       0.0                           155187.7188
+    0:00:08    7471.1      0.00       0.0       0.0                           155187.7188
+    0:00:08    7471.1      0.00       0.0       0.0                           155187.7188
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:08    7471.1      0.00       0.0       0.0                           155187.7188
+    0:00:08    7471.1      0.00       0.0       0.0                           155187.7188
+    0:00:08    7471.1      0.00       0.0       0.0                           155187.7188
+    0:00:08    7471.1      0.00       0.0       0.0                           155187.7188
+    0:00:08    7471.1      0.00       0.0       0.0                           155187.7188
+    0:00:08    7469.5      0.00       0.0       0.0                           155144.6562
+    0:00:08    7469.5      0.00       0.0       0.0                           155144.6562
+    0:00:09    7465.8      0.00       0.0       0.0                           154933.5000
+    0:00:09    7465.8      0.00       0.0       0.0                           154933.5000
+    0:00:09    7465.8      0.00       0.0       0.0                           154933.5000
+    0:00:09    7465.8      0.00       0.0       0.0                           154933.5000
+    0:00:09    7465.8      0.00       0.0       0.0                           154933.5000
+    0:00:09    7465.8      0.00       0.0       0.0                           154933.5000
+    0:00:09    7465.8      0.00       0.0       0.0                           154933.5000
+    0:00:09    7465.8      0.00       0.0       0.0                           154933.5000
+    0:00:09    7465.8      0.00       0.0       0.0                           154933.5000
+    0:00:09    7465.8      0.00       0.0       0.0                           154933.5000
+    0:00:10    7465.8      0.00       0.0       0.0                           154933.5000
+    0:00:10    7465.8      0.00       0.0       0.0                           154933.5000
+    0:00:10    7465.8      0.00       0.0       0.0                           154933.5000
+    0:00:10    7465.8      0.00       0.0       0.0                           154933.5000
+    0:00:10    7465.8      0.00       0.0       0.0                           154933.5000
+    0:00:10    7465.8      0.00       0.0       0.0                           154933.5000
+    0:00:10    7465.8      0.00       0.0       0.0                           154933.5000
+    0:00:10    7465.8      0.00       0.0       0.0                           154933.5000
+    0:00:10    7465.8      0.00       0.0       0.0                           154933.5000
+    0:00:10    7465.8      0.00       0.0       0.0                           154933.5000
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:10    7465.8      0.00       0.0       0.0                           154933.5000
+    0:00:11    7465.8      0.00       0.0       0.0                           154933.5000
+    0:00:14    7268.5      0.00       0.0       0.0                           150182.8594
+    0:00:14    7268.5      0.00       0.0       0.0                           150182.8594
+    0:00:15    7268.5      0.00       0.0       0.0                           150182.8594
+    0:00:15    7268.5      0.00       0.0       0.0                           150182.8594
+Loading db file '/eda/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+check_design
+ 
+****************************************
+check_design summary:
+Version:     S-2021.06-SP4
+Date:        Thu Dec 15 17:46:04 2022
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                    165
+    Unconnected ports (LINT-28)                                   163
+    Feedthrough (LINT-29)                                           1
+    Constant outputs (LINT-52)                                      1
+
+Cells                                                             157
+    Connected to power or ground (LINT-32)                        150
+    Nets connected to multiple pins on same cell (LINT-33)          7
+--------------------------------------------------------------------------------
+
+Warning: In design 'fpnew_top', port 'src_fmt_i[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top', port 'src_fmt_i[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top', port 'src_fmt_i[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top', port 'int_fmt_i[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top', port 'int_fmt_i[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top', port 'vectorial_op_i' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'B[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[75]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[74]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[73]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[72]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[71]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[70]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[69]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[68]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[67]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[66]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[65]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[64]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[63]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[62]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[61]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[60]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[59]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[58]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[57]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[56]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[55]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[54]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[53]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[52]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[51]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[50]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[49]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[48]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[47]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[46]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[45]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[44]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[43]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[42]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[41]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[40]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[39]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[38]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[37]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[36]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[35]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[34]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[33]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[32]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'A[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[76]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[75]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[74]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[73]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[72]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[71]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[70]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[69]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[68]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[67]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[66]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[65]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[64]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[63]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[62]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[61]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[60]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[59]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[58]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[57]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[56]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[55]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[54]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[53]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[52]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[51]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[50]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'A[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'B[76]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_3', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW02_mult_0', port 'TC' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_2', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_6', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_6', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_6', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_6', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_6', port 'SUM[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_add_6', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_5', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_5', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_5', port 'B[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_5', port 'B[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_5', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_5', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'fpnew_top_DW01_sub_0', input port 'B[0]' is connected directly to output port 'DIFF[0]'. (LINT-29)
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[30]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[29]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[28]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[27]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[26]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[25]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[24]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[23]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[22]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[21]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[20]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[19]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[18]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[17]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[16]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[15]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[14]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[13]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[12]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[11]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[10]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[9]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[7]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[6]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[5]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[3]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[2]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[1]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[75]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[74]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[73]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[72]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[71]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[70]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[69]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[68]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[67]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[66]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[65]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[64]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[63]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[62]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[61]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[60]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[59]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[58]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[57]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[56]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[55]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[54]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[53]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[52]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[51]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[50]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[49]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[48]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[47]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[46]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[45]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[44]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[43]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[42]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[41]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[40]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[39]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[38]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[37]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[36]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[35]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[34]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[33]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[32]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[31]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[30]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[29]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[28]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[27]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[26]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[25]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[24]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[23]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[22]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[21]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[20]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[19]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[18]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[17]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[16]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[15]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[14]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[13]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[12]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[11]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[10]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[9]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[7]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[6]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[5]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[4]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[3]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[2]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[1]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[0]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[76]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[75]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[74]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[73]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[72]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[71]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[70]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[69]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[68]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[67]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[66]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[65]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[64]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[63]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[62]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[61]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[60]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[59]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[58]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[57]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[56]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[55]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[54]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[53]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[52]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[51]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[50]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[1]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[0]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[76]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/mult_325' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'TC' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_293' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[9]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_293' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_287' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[9]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_287' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_287' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[9]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'add_1_root_add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_287' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'sub_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_515' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[9]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'sub_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_515' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'sub_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_515' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[7]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'sub_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_515' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[6]' is connected to logic 0. 
+Warning: In design 'fpnew_top', a pin on submodule 'sub_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_515' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'fpnew_top', the same net is connected to more than one pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/i_fpnew_rounding/add_63'. (LINT-33)
+   Net 'n10' is connected to pins 'B[30]', 'B[29]'', 'B[28]', 'B[27]', 'B[26]', 'B[25]', 'B[24]', 'B[23]', 'B[22]', 'B[21]', 'B[20]', 'B[19]', 'B[18]', 'B[17]', 'B[16]', 'B[15]', 'B[14]', 'B[13]', 'B[12]', 'B[11]', 'B[10]', 'B[9]', 'B[8]', 'B[7]', 'B[6]', 'B[5]', 'B[4]', 'B[3]', 'B[2]', 'B[1]', 'CI'.
+Warning: In design 'fpnew_top', the same net is connected to more than one pin on submodule 'gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_372'. (LINT-33)
+   Net 'n21' is connected to pins 'A[75]', 'A[74]'', 'A[73]', 'A[72]', 'A[71]', 'A[70]', 'A[69]', 'A[68]', 'A[67]', 'A[66]', 'A[65]', 'A[64]', 'A[63]', 'A[62]', 'A[61]', 'A[60]', 'A[59]', 'A[58]', 'A[57]', 'A[56]', 'A[55]', 'A[54]', 'A[53]', 'A[52]', 'A[51]', 'A[50]', 'A[49]', 'A[48]', 'A[47]', 'A[46]', 'A[45]', 'A[44]', 'A[43]', 'A[42]', 'A[41]', 'A[40]', 'A[39]', 'A[38]', 'A[37]', 'A[36]', 'A[35]', 'A[34]', 'A[33]', 'A[32]', 'A[31]', 'A[30]', 'A[29]', 'A[28]', 'A[27]', 'A[26]', 'A[25]', 'A[24]', 'A[23]', 'A[22]', 'A[21]', 'A[20]', 'A[19]', 'A[18]', 'A[17]', 'A[16]', 'A[15]', 'A[14]', 'A[13]', 'A[12]', 'A[11]', 'A[10]', 'A[9]', 'A[8]', 'A[7]', 'A[6]', 'A[5]', 'A[4]', 'A[3]', 'A[2]', 'A[1]', 'CI'.
+Warning: In design 'fpnew_top', the same net is connected to more than one pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2'. (LINT-33)
+   Net 'n22' is connected to pins 'A[76]', 'A[75]'', 'A[74]', 'A[73]', 'A[72]', 'A[71]', 'A[70]', 'A[69]', 'A[68]', 'A[67]', 'A[66]', 'A[65]', 'A[64]', 'A[63]', 'A[62]', 'A[61]', 'A[60]', 'A[59]', 'A[58]', 'A[57]', 'A[56]', 'A[55]', 'A[54]', 'A[53]', 'A[52]', 'A[51]', 'A[50]', 'B[76]'.
+Warning: In design 'fpnew_top', the same net is connected to more than one pin on submodule 'add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_368_2'. (LINT-33)
+   Net 'n3369' is connected to pins 'A[1]', 'A[0]''.
+Warning: In design 'fpnew_top', the same net is connected to more than one pin on submodule 'add_1_root_add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_287'. (LINT-33)
+   Net 'n3368' is connected to pins 'A[9]', 'B[9]''.
+Warning: In design 'fpnew_top', the same net is connected to more than one pin on submodule 'add_1_root_add_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_287'. (LINT-33)
+   Net 'n3367' is connected to pins 'A[8]', 'B[8]''.
+Warning: In design 'fpnew_top', the same net is connected to more than one pin on submodule 'sub_1_root_gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_515'. (LINT-33)
+   Net 'n3365' is connected to pins 'B[9]', 'B[8]'', 'B[7]', 'B[6]'.
+Warning: In design 'fpnew_top', output port 'status_o[DZ]' is connected directly to 'logic 0'. (LINT-52)
+1
+report_resources > ./resource_report/report_resource_p5_quart.txt
+report_timing > ./timing_report/report_timing_p5_quart.txt
+report_area > ./area_report/report_area_p5_quart.txt
+change_names -hierarchy -rules verilog
+Warning: In the design fpnew_top_DW01_sub_0, net 'B[0]' is connecting multiple ports. (UCN-1)
+1
+write_sdf ../netlist/fpnew_top_p5_quart.sdf
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/isa09_2022_2023/lab2/Assignment1/netlist/fpnew_top_p5_quart.sdf'. (WT-3)
+1
+write -f verilog -hierarchy -output ../netlist/fpnew_top_p5_quart.v
+Writing verilog file '/home/isa09_2022_2023/lab2/Assignment1/netlist/fpnew_top_p5_quart.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+write_sdc ../netlist/fpnew_top_p5_quart.sdc
+1
+quit
+
+Memory usage for this session 234 Mbytes.
+Memory usage for this session including child processes 234 Mbytes.
+CPU usage for this session 125 seconds ( 0.03 hours ).
+Elapsed time for this session 136 seconds ( 0.04 hours ).
+
+Thank you...

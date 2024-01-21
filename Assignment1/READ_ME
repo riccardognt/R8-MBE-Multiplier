@@ -1,0 +1,33 @@
+List of the useful files for the tasks
+
+-)10 FLOATING POINT MULTIPLICATIONS
+
+	definition of the operands and computation of the products --> ./c_model	C code--> ./c_model/c_model.c	exexutable --> ./c_model/c_model.exe
+	C results of the products --> ./sim/txt_files/results_c.txt
+	simulation of the FPU --> src files: ./src/*	testbench files: ./tb/rtl/* 	simulation script: ./sim/FIRST_SIM.do	script results: ./sim/txt_files/results_hdl.txt
+
+-)Synthesis part with Synopsys
+	for simulation resolution in ps --> modifies in ./sim/modelsim.ini
+
+	1) synthesis script: ./syn/p1.syn	timing report: ./syn/timing_report/report_timing_p1.txt		area report: ./syn/area_report/report_area_p1.txt
+	   tb files for simulation: ./tb/p1_tb/*		simulation script: ./sim/p1.do		products results: ./sim/txt_files/results_hdl_p1.txt
+
+	2) synthesis script: ./syn/p2.syn	timing report: ./syn/timing_report/report_timing_p2.txt		area report: ./syn/area_report/report_area_p2.txt
+	   tb files for simulation: ./tb/p2_tb (denominated with "...p2.vhd/sv")		simulation script: ./sim/p2.do		products results: ./sim/txt_files/results_hdl_p2.txt
+
+	   SYNTHESIS AND SIMULATION AT QUARTER FREQUENCY FOR AVOIDING TIMING VIOLATIONS DURING SIMULATION:
+	   synthesis script: ./syn/p2_quart.syn	    timing report: ./syn/timing_report/report_timing_p2_quart.txt		area report: ./syn/area_report/report_area_p2_quart.txt
+	   tb files for simulation: ./tb/p2_quart_tb (denominated with "...p2_quart.vhd/sv")   simulation script: ./sim/p2_quart.do    products results: ./sim/txt_files/results_hdl_p2_quart.txt
+
+	3) synthesis script: ./syn/p3.syn	timing report: ./syn/timing_report/report_timing_p3.txt		area report: ./syn/area_report/report_area_p3.txt
+	   tb files for simulation: ./tb/p3_tb/*		simulation script: ./sim/p3.do		products results: ./sim/txt_files/results_hdl_p3.txt
+
+    4) synthesis script: ./syn/p4.syn	timing report: ./syn/timing_report/report_timing_p4.txt		area report: ./syn/area_report/report_area_p4.txt	resource report: ./syn/resource_report/report_resource_p4.txt
+	   tb files for simulation: ./tb/p4_tb/*		simulation script: ./sim/p4.do		products results: ./sim/txt_files/results_hdl_p4.txt
+
+	5) synthesis script: ./syn/p5.syn	timing report: ./syn/timing_report/report_timing_p5.txt		area report: ./syn/area_report/report_area_p5.txt	resource report: ./syn/resource_report/report_resource_p5.txt
+	   tb files for simulation: ./tb/p5_tb/ (denominated with "...p5.vhd/sv")		simulation script: ./sim/p5.do		products results: ./sim/txt_files/results_hdl_p5.txt
+
+	   SYNTHESIS AND SIMULATION AT QUARTER FREQUENCY FOR AVOIDING TIMING VIOLATIONS DURING SIMULATION:
+	   synthesis script: ./syn/p5_quart.syn	    timing report: ./syn/timing_report/report_timing_p5_quart.txt	area report: ./syn/area_report/report_area_p5_quart.txt	  resource report: ./syn/resource_report/report_resource_p5_quart.txt
+	   tb files for simulation: ./tb/p5_quart_tb (denominated with "...p5_quart.vhd/sv")   simulation script: ./sim/p5_quart.do    products results: ./sim/txt_files/results_hdl_p5_quart.txt    

@@ -1,0 +1,293 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : fpnew_top
+Version: S-2021.06-SP4
+Date   : Thu Dec 15 11:49:54 2022
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/MY_CLK_r_REG292_S1
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/MY_CLK_r_REG48_S2
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpnew_top          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/MY_CLK_r_REG292_S1/CK (DFFR_X1)
+                                                          0.00       0.00 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/MY_CLK_r_REG292_S1/Q (DFFR_X1)
+                                                          0.17       0.17 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/U1669/ZN (OAI21_X1)
+                                                          0.07       0.23 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_1_root_sub_287/B[3] (fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB__DW01_add_4_DW01_add_5)
+                                                          0.00       0.23 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_1_root_sub_287/U1/Z (XOR2_X1)
+                                                          0.08       0.31 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_1_root_sub_287/U2/Z (XOR2_X1)
+                                                          0.06       0.38 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_1_root_sub_287/SUM[3] (fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB__DW01_add_4_DW01_add_5)
+                                                          0.00       0.38 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/U422/Z (XOR2_X1)
+                                                          0.07       0.44 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/U62/ZN (AND2_X1)
+                                                          0.05       0.49 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_293/B[3] (fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB__DW01_sub_2)
+                                                          0.00       0.49 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_293/U23/ZN (INV_X1)
+                                                          0.03       0.52 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_293/U13/ZN (NAND2_X1)
+                                                          0.04       0.56 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_293/U7/ZN (NAND3_X1)
+                                                          0.04       0.60 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_293/U18/ZN (NAND2_X1)
+                                                          0.03       0.63 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_293/U20/ZN (NAND3_X1)
+                                                          0.04       0.66 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_293/U2_5/CO (FA_X1)
+                                                          0.10       0.76 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_293/U4/ZN (NAND2_X1)
+                                                          0.03       0.80 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_293/U6/ZN (NAND3_X1)
+                                                          0.04       0.83 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_293/U2_7/CO (FA_X1)
+                                                          0.09       0.92 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_293/U2_8/S (FA_X1)
+                                                          0.14       1.06 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/sub_293/DIFF[8] (fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB__DW01_sub_2)
+                                                          0.00       1.06 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/U148/ZN (NOR2_X1)
+                                                          0.03       1.09 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/U115/ZN (NAND2_X1)
+                                                          0.03       1.12 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/U121/ZN (NAND2_X1)
+                                                          0.04       1.16 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/U359/ZN (AND2_X1)
+                                                          0.05       1.21 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/U343/ZN (NAND2_X1)
+                                                          0.07       1.28 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/U2015/ZN (INV_X1)
+                                                          0.06       1.35 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/U52/Z (BUF_X1)
+                                                          0.08       1.43 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/U358/ZN (NAND2_X1)
+                                                          0.11       1.54 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/U12/ZN (INV_X1)
+                                                          0.07       1.61 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/U1756/ZN (AOI21_X1)
+                                                          0.06       1.67 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/U1755/ZN (OAI221_X1)
+                                                          0.06       1.72 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/U1649/ZN (AND3_X1)
+                                                          0.06       1.78 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/U1648/ZN (AND4_X1)
+                                                          0.04       1.82 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/U1644/ZN (OAI21_X1)
+                                                          0.04       1.86 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/U1642/ZN (AOI211_X1)
+                                                          0.03       1.89 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/U1641/ZN (OAI211_X1)
+                                                          0.04       1.93 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/U1636/ZN (NOR3_X1)
+                                                          0.03       1.96 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/CI (fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB__DW01_add_5_DW01_add_6)
+                                                          0.00       1.96 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U114/ZN (AND2_X1)
+                                                          0.04       2.01 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_2/CO (FA_X1)
+                                                          0.09       2.10 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_3/CO (FA_X1)
+                                                          0.10       2.20 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U76/ZN (NAND2_X1)
+                                                          0.03       2.23 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U78/ZN (NAND3_X1)
+                                                          0.04       2.27 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_5/CO (FA_X1)
+                                                          0.09       2.36 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_6/CO (FA_X1)
+                                                          0.09       2.45 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_7/CO (FA_X1)
+                                                          0.10       2.55 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U171/ZN (NAND2_X1)
+                                                          0.03       2.58 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U173/ZN (NAND3_X1)
+                                                          0.05       2.63 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U177/ZN (NAND2_X1)
+                                                          0.04       2.66 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U179/ZN (NAND3_X1)
+                                                          0.05       2.71 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U141/ZN (NAND2_X1)
+                                                          0.04       2.75 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U143/ZN (NAND3_X1)
+                                                          0.04       2.78 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_11/CO (FA_X1)
+                                                          0.09       2.87 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_12/CO (FA_X1)
+                                                          0.09       2.96 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_13/CO (FA_X1)
+                                                          0.09       3.05 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_14/CO (FA_X1)
+                                                          0.09       3.14 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_15/CO (FA_X1)
+                                                          0.10       3.24 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U146/ZN (NAND2_X1)
+                                                          0.03       3.28 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U149/ZN (NAND3_X1)
+                                                          0.05       3.32 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U129/ZN (NAND2_X1)
+                                                          0.04       3.36 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U131/ZN (NAND3_X1)
+                                                          0.04       3.40 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_18/CO (FA_X1)
+                                                          0.10       3.49 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U159/ZN (NAND2_X1)
+                                                          0.03       3.53 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U161/ZN (NAND3_X1)
+                                                          0.04       3.57 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_20/CO (FA_X1)
+                                                          0.09       3.66 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_21/CO (FA_X1)
+                                                          0.09       3.75 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_22/CO (FA_X1)
+                                                          0.09       3.84 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_23/CO (FA_X1)
+                                                          0.09       3.93 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_24/CO (FA_X1)
+                                                          0.10       4.03 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U164/ZN (NAND2_X1)
+                                                          0.03       4.06 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U167/ZN (NAND3_X1)
+                                                          0.05       4.11 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U135/ZN (NAND2_X1)
+                                                          0.04       4.14 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U137/ZN (NAND3_X1)
+                                                          0.04       4.18 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_27/CO (FA_X1)
+                                                          0.09       4.27 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_28/CO (FA_X1)
+                                                          0.10       4.37 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U25/ZN (NAND2_X1)
+                                                          0.03       4.40 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U27/ZN (NAND3_X1)
+                                                          0.04       4.44 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_30/CO (FA_X1)
+                                                          0.09       4.53 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_31/CO (FA_X1)
+                                                          0.10       4.63 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U56/ZN (NAND2_X1)
+                                                          0.03       4.67 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U59/ZN (NAND3_X1)
+                                                          0.04       4.70 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_33/CO (FA_X1)
+                                                          0.09       4.79 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_34/CO (FA_X1)
+                                                          0.10       4.89 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U70/ZN (NAND2_X1)
+                                                          0.03       4.93 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U72/ZN (NAND3_X1)
+                                                          0.05       4.97 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U19/ZN (NAND2_X1)
+                                                          0.04       5.01 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U21/ZN (NAND3_X1)
+                                                          0.04       5.05 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_37/CO (FA_X1)
+                                                          0.09       5.14 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_38/CO (FA_X1)
+                                                          0.10       5.24 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U51/ZN (NAND2_X1)
+                                                          0.03       5.27 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U53/ZN (NAND3_X1)
+                                                          0.04       5.31 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_40/CO (FA_X1)
+                                                          0.09       5.40 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_41/CO (FA_X1)
+                                                          0.10       5.50 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U122/ZN (NAND2_X1)
+                                                          0.03       5.53 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U125/ZN (NAND3_X1)
+                                                          0.04       5.57 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_43/CO (FA_X1)
+                                                          0.09       5.66 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_44/CO (FA_X1)
+                                                          0.09       5.75 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_45/CO (FA_X1)
+                                                          0.10       5.85 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U153/ZN (NAND2_X1)
+                                                          0.03       5.88 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U155/ZN (NAND3_X1)
+                                                          0.04       5.92 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_47/CO (FA_X1)
+                                                          0.10       6.02 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U63/ZN (NAND2_X1)
+                                                          0.03       6.05 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U66/ZN (NAND3_X1)
+                                                          0.04       6.09 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U1_49/CO (FA_X1)
+                                                          0.10       6.19 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U96/ZN (AND2_X1)
+                                                          0.05       6.25 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U93/ZN (NAND2_X1)
+                                                          0.04       6.29 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U86/ZN (NOR2_X1)
+                                                          0.03       6.32 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U193/ZN (AND2_X1)
+                                                          0.05       6.37 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U35/ZN (AND2_X1)
+                                                          0.04       6.41 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U36/ZN (NAND2_X1)
+                                                          0.03       6.43 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U40/ZN (NOR2_X1)
+                                                          0.03       6.46 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U42/ZN (AND2_X1)
+                                                          0.04       6.50 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U43/ZN (AND2_X1)
+                                                          0.04       6.54 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U32/ZN (AND2_X1)
+                                                          0.03       6.58 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/U33/ZN (AND2_X1)
+                                                          0.04       6.62 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/add_1_root_add_368_2/SUM[76] (fpnew_fma_0_00000003_3__logic_Z_1yB___logic_Z_1yB__DW01_add_5_DW01_add_6)
+                                                          0.00       6.62 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/U119/ZN (NOR2_X1)
+                                                          0.16       6.78 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/U108/Z (CLKBUF_X1)
+                                                          0.21       6.99 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/U106/Z (CLKBUF_X1)
+                                                          0.20       7.19 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/U875/ZN (AOI22_X1)
+                                                          0.05       7.24 f
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/U874/ZN (OAI21_X1)
+                                                          0.04       7.28 r
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/MY_CLK_r_REG48_S2/D (DFFR_X1)
+                                                          0.01       7.29 r
+  data arrival time                                                  7.29
+
+  clock MY_CLK (rise edge)                                7.40       7.40
+  clock network delay (ideal)                             0.00       7.40
+  clock uncertainty                                      -0.07       7.33
+  gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fma/MY_CLK_r_REG48_S2/CK (DFFR_X1)
+                                                          0.00       7.33 r
+  library setup time                                     -0.04       7.29
+  data required time                                                 7.29
+  --------------------------------------------------------------------------
+  data required time                                                 7.29
+  data arrival time                                                 -7.29
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

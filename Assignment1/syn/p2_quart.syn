@@ -1,0 +1,41 @@
+define_design_lib WORK -path ./work
+analyze -library WORK -format sverilog {../src/cf_math_pkg.sv}
+analyze -library WORK -format sverilog {../src/lzc.sv}
+analyze -library WORK -format sverilog {../src/rr_arb_tree.sv}
+analyze -library WORK -format sverilog {../src/fpnew_pkg.sv}
+analyze -library WORK -format sverilog {../src/fpnew_classifier.sv}
+analyze -library WORK -format sverilog {../src/fpnew_rounding.sv}
+analyze -library WORK -format sverilog {../src/fpnew_fma.sv}
+analyze -library WORK -format sverilog {../src/fpnew_opgroup_fmt_slice.sv}
+analyze -library WORK -format sverilog {../src/fpnew_opgroup_block.sv}
+analyze -library WORK -format sverilog {../src/fpnew_top.sv}
+
+set power_preserve_rtl_hier_names true
+elaborate fpnew_top -lib WORK
+uniquify
+link
+
+
+create_clock -name MY_CLK -period 7.40 clk_i
+set_dont_touch_network MY_CLK
+set_clock_uncertainty 0.07 [get_clocks MY_CLK]
+set_input_delay 0.5 -max -clock MY_CLK [remove_from_collection [all_inputs] clk_i]
+set_output_delay 0.5 -max -clock MY_CLK [all_outputs]
+
+
+set OLOAD [load_of NangateOpenCellLibrary/BUF_X4/A]
+set_load $OLOAD [all_outputs]
+compile
+optimize_registers
+check_design
+
+
+report_timing > ./timing_report/report_timing_p2_quart.txt
+report_area > ./area_report/report_area_p2_quart.txt
+
+#ungroup -all -flatten
+change_names -hierarchy -rules verilog
+write_sdf ../netlist/fpnew_top_p2_quart.sdf
+write -f verilog -hierarchy -output ../netlist/fpnew_top_p2_quart.v
+write_sdc ../netlist/fpnew_top_p2_quart.sdc
+quit

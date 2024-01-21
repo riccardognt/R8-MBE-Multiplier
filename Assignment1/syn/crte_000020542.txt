@@ -1,0 +1,274 @@
+CRTE_SNAPSHOT_START
+
+SECTION_CRTE_VERSION
+3.0
+
+SECTION_PID
+20542
+
+SECTION_POLLING_INTERVAL
+5
+
+SECTION_DATE_TIME
+Wed Dec 14 00:13:41 CET 2022 (1670973221)
+
+SECTION_OS_VERSION
+osname: Linux
+hostname: isaserver
+arch: x86_64
+release_version: 3.10.0-1160.71.1.el7.x86_64
+
+SECTION_IPC_INFO
+
+------ Message Queues --------
+key        msqid      owner      perms      used-bytes   messages    
+
+------ Shared Memory Segments --------
+key        shmid      owner      perms      bytes      nattch     status      
+0x00000000 10452992   isa20_2022 600        1048576    2          dest         
+0x00000000 24215553   isa24_2022 600        1048576    2          dest         
+0x00000000 34537475   isa13_2022 600        393216     1          dest         
+0x00000000 10747910   isa20_2022 600        524288     2          dest         
+0x00000000 29458439   isa20_2022 600        393216     2          dest         
+0x00000000 24346632   isa24_2022 600        177888     2          dest         
+0x00000000 24346633   isa24_2022 600        1859920    2          dest         
+0x00000000 35553291   isa13_2022 600        393216     1          dest         
+0x00000000 16449553   isa20_2022 600        393216     1          dest         
+0x00000000 29458451   isa24_2022 600        393216     2        SECTION_ULIMIT
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 127954
+max locked memory       (kbytes, -l) 64
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 4096
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) unlimited
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 4096
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
+
+SECTION_SYSCONF
+_SC_THREAD_SAFE_FUNCTIONS= 200809
+_SC_CLK_TCK= 100
+_SC_OPEN_MAX= 4096
+_SC_PAGE_SIZE= 4096
+_SC_ARG_MAX= 4611686018427387903
+_SC_CHILD_MAX= 4096
+_SC_LINE_MAX= 2048
+
+SECTION_FULL_COMMAND
+/eda/synopsys/2021-22/RHELx86/SYN_2021.06-SP4/linux64/syn/bin/common_shell_exec -shell design_vision -r /eda/synopsys/2021-22/RHELx86/SYN_2021.06-SP4
+
+SECTION_CPUINFO
+total_core: 6
+
+model_name:  Westmere E56xx/L56xx/X56xx (Nehalem-C)
+flags:  fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx lm constant_tsc nopl eagerfpu pni ssse3 cx16 sse4_1 sse4_2 x2apic popcnt aes hypervisor lahf_lm
+cpu_family: 6
+core_frequency_mhz: 1994
+core_per_socket: 0
+stepping: 1
+cache_size_kb: 4096
+ht: 0
+
+model_name:  Westmere E56xx/L56xx/X56xx (Nehalem-C)
+flags:  fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx lm constant_tsc nopl eagerfpu pni ssse3 cx16 sse4_1 sse4_2 x2apic popcnt aes hypervisor lahf_lm
+cpu_family: 6
+core_frequency_mhz: 1994
+core_per_socket: 0
+stepping: 1
+cache_size_kb: 4096
+ht: 0
+
+model_name:  Westmere E56xx/L56xx/X56xx (Nehalem-C)
+flags:  fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx lm constant_tsc nopl eagerfpu pni ssse3 cx16 sse4_1 sse4_2 x2apic popcnt aes hypervisor lahf_lm
+cpu_family: 6
+core_frequency_mhz: 1994
+core_per_socket: 0
+stepping: 1
+cache_size_kb: 4096
+ht: 0
+
+model_name:  Westmere E56xx/L56xx/X56xx (Nehalem-C)
+flags:  fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx lm constant_tsc nopl eagerfpu pni ssse3 cx16 sse4_1 sse4_2 x2apic popcnt aes hypervisor lahf_lm
+cpu_family: 6
+core_frequency_mhz: 1994
+core_per_socket: 0
+stepping: 1
+cache_size_kb: 4096
+ht: 0
+
+model_name:  Westmere E56xx/L56xx/X56xx (Nehalem-C)
+flags:  fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx lm constant_tsc nopl eagerfpu pni ssse3 cx16 sse4_1 sse4_2 x2apic popcnt aes hypervisor lahf_lm
+cpu_family: 6
+core_frequency_mhz: 1994
+core_per_socket: 0
+stepping: 1
+cache_size_kb: 4096
+ht: 0
+
+model_name:  Westmere E56xx/L56xx/X56xx (Nehalem-C)
+flags:  fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx lm constant_tsc nopl eagerfpu pni ssse3 cx16 sse4_1 sse4_2 x2apic popcnt aes hypervisor lahf_lm
+cpu_family: 6
+core_frequency_mhz: 1994
+core_per_socket: 0
+stepping: 1
+cache_size_kb: 4096
+ht: 0
+
+SECTION_OS_RELEASE_VERSION
+CentOS Linux release 7.9.2009 (Core)
+
+
+SECTION_SYS/VM
+/proc/sys/vm/admin_reserve_kbytes:8192
+/proc/sys/vm/block_dump:0
+/proc/sys/vm/dirty_background_bytes:0
+/proc/sys/vm/dirty_background_ratio:10
+/proc/sys/vm/dirty_bytes:0
+/proc/sys/vm/dirty_expire_centisecs:3000
+/proc/sys/vm/dirty_ratio:30
+/proc/sys/vm/dirty_writeback_centisecs:500
+/proc/sys/vm/drop_caches:0
+/proc/sys/vm/extfrag_threshold:500
+/proc/sys/vm/hugepages_treat_as_movable:0
+/proc/sys/vm/hugetlb_shm_group:0
+/proc/sys/vm/laptop_mode:0
+/proc/sys/vm/legacy_va_layout:0
+/proc/sys/vm/lowmem_reserve_ratio:256	256	32
+/proc/sys/vm/max_map_count:65530
+/proc/sys/vm/memory_failure_early_kill:0
+/proc/sys/vm/memory_failure_recovery:1
+/proc/sys/vm/min_free_kbytes:67584
+/proc/sys/vm/min_slab_ratio:5
+/proc/sys/vm/min_unmapped_ratio:1
+/proc/sys/vm/mmap_min_addr:4096
+/proc/sys/vm/nr_hugepages:0
+/proc/sys/vm/nr_hugepages_mempolicy:0
+/proc/sys/vm/nr_overcommit_hugepages:0
+/proc/sys/vm/nr_pdflush_threads:0
+/proc/sys/vm/numa_zonelist_order:default
+/proc/sys/vm/oom_dump_tasks:1
+/proc/sys/vm/oom_kill_allocating_task:0
+/proc/sys/vm/overcommit_kbytes:0
+/proc/sys/vm/overcommit_memory:0
+/proc/sys/vm/overcommit_ratio:50
+/proc/sys/vm/page-cluster:3
+/proc/sys/vm/panic_on_oom:0
+/proc/sys/vm/percpu_pagelist_fraction:0
+/proc/sys/vm/stat_interval:1
+/proc/sys/vm/swappiness:30
+/proc/sys/vm/user_reserve_kbytes:131072
+/proc/sys/vm/vfs_cache_pressure:100
+/proc/sys/vm/zone_reclaim_mode:0
+
+
+SECTION_SWAP
+swap_partition: /dev/dm-1
+size_gb: 3
+
+CRTE_SNAPSHOT_END
+
+CRTE_PERIODIC_START 1 1670973221918
+
+SECTION_MPSTAT
+total_core: 6
+
+CPU     %user   %kernel %wait   %idle   
+all   39.351929 14.369549 0.022982 46.255539
+0     37.899792 13.907022 0.022811 48.170372
+1     38.447536 14.340290 0.022633 47.189541
+2     39.275150 14.330054 0.023690 46.371105
+3     39.510895 14.408353 0.023716 46.057030
+4     40.032825 14.513918 0.023002 45.430252
+5     40.942505 14.717257 0.022039 44.318195
+SECTION_LOADAVG
+4.38 4.79 5.22 3/2729 11291
+
+SECTION_PID_STATUS
+name: common_shell_ex
+state: 1
+vmsize: 2489904
+vmrss: 542380
+vmdata: 1595992
+vmstk: 832
+vmexe: 300264
+vmlib: 318504
+threads: 3
+
+SECTION_PROCESS_CPU_UTIL
+pid: 20542
+cpu_total_time: 1458972457
+cpu_used_time: 46478
+cpu_p: 
+
+SECTION_SYSTEM_CPU_UTIL
+sys_cpu_p: 
+
+SECTION_MEMINFO
+memtotal: 32779896
+memfree: 713460
+cached: 12203004
+swapcached: 2552
+active: 15028924
+swaptotal: 4194300
+swapfree: 4126280
+
+SECTION_SMAPS
+shared_kb: 101624
+private_kb: 440780
+
+SECTION_DF
+Filesystem  Size  Used Avail Use%
+filesystem        34G  33G  1G    96
+
+Filesystem    Inodes   IUsed   IFree   IUse%
+filesystem          3540128  520222 3019906   4294966816
+
+SECTION_CWD
+Filesystem  Size  Used Avail Use%
+filesystem        34G  33G  1G    96
+
+Filesystem    Inodes   IUsed   IFree   IUse%
+filesystem          3540128  520222 3019906   4294966816
+
+SECTION_SWAP_RATE
+blk_read: 310904
+blk_wrtn: 2913976
+swap_in_rate: 
+swap_out_rate: 
+swap_in_rate: 
+swap_out_rate: 
+
+SECTION_FD_SIZE
+files: 14
+total_size: 1831061
+
+SECTION_NET_INTERFACE
+total_eth_avbl: 1
+
+name net_rx_err net_rx_drp net_tx_err net_tx_drp 
+  eth0:         0        4        0        0
+
+SECTION_NFSSTAT
+readlink: 0
+write: 0
+getattr: 60
+retrans: 0
+raw_data: 
+net 0 0 0 0
+rpc 24108991 0 24109080
+proc3 22 0 14595696 0 729381 7195091 94172 332386 0 1818 0 0 0 1 0 0 0 5485 1147905 7053 4 2 0
+
+
+SECTION_THREAD_CPU_UTIL
+20542 : 20542 (common_shell_ex) R 19842 20542 19842 34820 20542 8192 251796 237135 34 9 40615 1437 1275 165 20 0 3 0 246075287 2549661696 135595 18446744073709551615 4194304 311661885 140737488345696 140737488338064 46912570283869 0 2147221247 69210112 1268412159 0 0 0 17 3 0 0 38 0 0 396207024 410685551 1633804288 140737488346572 140737488346722 140737488346722 140737488351144 0
+21291 : 21291 (QXcbEventReader) S 19842 20542 19842 34820 20542 1073750080 36 237135 0 9 53 56 1275 165 20 0 3 0 246076123 2549661696 135595 18446744073709551615 4194304 311661885 140737488345696 46912950178336 46912644615645 0 8192 69210112 1268412159 18446744072176944405 0 0 -1 2 0 0 0 0 0 396207024 410685551 1633804288 140737488346572 140737488346722 140737488346722 140737488351144 0
+21564 : 21564 (Thread (pooled)) S 19842 20542 19842 34820 20542 1073750080 1 237135 0 9 0 0 1275 165 20 0 3 0 246076430 2549661696 135595 18446744073709551615 4194304 311661885 140737488345696 46912998945200 46912570272309 0 8192 69210112 1268412159 18446744072175561046 0 0 -1 4 0 0 0 0 0 396207024 410685551 1633804288 140737488346572 140737488346722 140737488346722 140737488351144 0
+
+CRTE_PERIODIC_END 1 1670973221918
